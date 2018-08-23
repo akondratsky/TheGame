@@ -27,10 +27,25 @@ gulp.task("generate-level", function() {
     var cohesionIndex = process.argv.indexOf("-cohesion");
     var stepsIndex = process.argv.indexOf("-steps");
 
-    if ((sizeIndex>-1)&&(cohesionIndex>-1)&&(stepsIndex>-1))  {
+    if (sizeIndex>-1) {
         size = process.argv[sizeIndex+1];
+    }
+    else {
+        size = 7;
+    }
+
+    if (cohesionIndex>-1) {
         cohesion = process.argv[cohesionIndex+1];
+    }
+    else {
+        cohesion = 6;
+    }
+
+    if (stepsIndex>-1) {
         steps = process.argv[stepsIndex+1];
+    }
+    else {
+        steps = 42;
     }
 
     if (!Number.isInteger(+size) 
