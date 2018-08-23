@@ -1,0 +1,45 @@
+// defaults if we don't have generated level map:
+
+$field-size: 3 !default;
+$cell-width: 100px !default;
+
+$cells-links: ((2)         // --from-1-to-2
+                (3)        // --from-2-to-3
+                (4)        // --from-3-to-4
+                (1)        // --from-4-to-1
+                (3, 4)
+                (4, 5)
+                (9, 1)
+                (1, 6)
+                (6, 8)) !default;
+
+// work with variables:
+
+$border-width: 3px;
+$border-style: solid;
+$border-color: #000;
+
+$color-primary: #9E2730;
+$color-secondary: #2F8621;
+
+
+$number-of-cells: $field-size * $field-size;
+
+
+
+/*
+
+for each in-label:
+
+.cell-1 {
+    transform: translate(var( --ca1-1 )) translate(var( --ca1-2 )) translate(var( --ca1-3 )) ...
+}
+
+.cell-1 {
+    --ca-1: $cell-cize;
+}
+
+.cell-1:checked {
+    --ca-1: 0;
+
+*/
