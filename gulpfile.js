@@ -4,8 +4,9 @@ const   gulp        = require("gulp"),
         sourcemaps  = require("gulp-sourcemaps"),
         inject      = require("gulp-inject-string"),
         PluginError = require("plugin-error"),
-        remove   = require("gulp-remove-content"),
-        merge       = require("merge-stream");
+        remove      = require("gulp-remove-content"),
+        merge       = require("merge-stream"),
+        sequence    = require("gulp-sequence");
 
 
 gulp.task("css", function() {
@@ -189,5 +190,8 @@ function generateLevelMap(size, cohesion, steps) {
 gulp.task("watch", function() {
     gulp.watch("src/scss/**/*.scss", ["css"]);
 });
+
+gulp.task("new", sequence("generate-level", "css"));
+
 
 
