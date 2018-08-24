@@ -1,4 +1,7 @@
 # TheGame
+# Yes, the
+
+![Game-image](https://raw.githubusercontent.com/akondratsky/TheGame/master/img.png)
 
 ## About
 
@@ -25,7 +28,7 @@ You can generate new level with options. Like this:
 ```
 gulp new -size 3 -cohesion 2 -steps 4
 ```
-A lot of comments about it.
+Few comments about it.
 
 ```-size``` is side of square field in cell. For example if you set ```-size 3``` number of all cells will be 9.
 
