@@ -29,7 +29,7 @@ $wyp: ();
 @for $cell-number from 1 through $number-of-cells {
 
     $bpy: ();
-    $bpy: #{ "bottom calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
+    $bpy: #{ "calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
     
     @for $cn from 1 through $number-of-cells {
         @if contains(nth($cells-links, $cn), $cell-number) {
