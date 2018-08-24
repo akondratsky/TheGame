@@ -5,7 +5,7 @@
 
 ## About
 
-A simplest logic game developed only with HTML and CSS
+A simplest logic game that works only with HTML and CSS. But yes, it was developed with JS and Kuzkina Mother.
 
 > Because I can!
 
