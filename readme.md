@@ -30,7 +30,7 @@ gulp new -size 3 -cohesion 2 -steps 4
 ```
 Few comments about it.
 
-```-size``` is side of square field in cell. For example if you set ```-size 3``` number of all cells will be 9.
+```-size``` is side of square field in cells. For example if you set ```-size 3``` number of all cells will be 9.
 
 ```-cohesion``` is maximum number of linked cells. It means that number of cells that changing color with clickable cell cannot be more than number of _cohesion_.
 
