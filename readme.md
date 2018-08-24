@@ -3,6 +3,10 @@
 
 ![Game-image](https://raw.githubusercontent.com/akondratsky/TheGame/master/img.png)
 
+## System Requirments
+
+FF
+
 ## About
 
 A simplest logic game that works only with HTML and CSS. But yes, it was developed with JS and Kuzkina Mother.
