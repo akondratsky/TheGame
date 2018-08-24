@@ -5,7 +5,7 @@
 
 ## System Requirments
 
-FF
+Tested on last versions of FF and Chrome
 
 ## About
 
