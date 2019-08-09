@@ -1,41 +1,43 @@
 # TheGame
-# Yes, the
+# Yes, the pure HTML & CSS
 
 ![Game-image](https://raw.githubusercontent.com/akondratsky/TheGame/master/img.png)
 
 ## System Requirments
 
-Tested on last versions of FF and Chrome
+Browser.
 
 ## About
 
-A simplest logic game that works only with HTML and CSS. But yes, it was developed with JS and Kuzkina Mother.
+Generated game uses pure HTML and CSS. I created it when studied in EPAM's training center. By first, it was the way to improve "hard" skills, and, by second, the try to understand, where is in nowadays a fine line between programming and markup languages. And...
 
 > Because I can!
 
-Player has a square field with cells. Clicking on cell changing it's color and affect to color of some other cells on the field (invert it). Purpose of player - make all cells filled with one color.
+## Rules
 
-This game is metaphor about CSS. Just feel the pain.
+Player has a square field with cells. Clicking on cell changing it's color and affects the color of some other cells in the field by inverting it. Purpose of player is make all cells filled with one color.
 
-## How to run
+## How to
 
-You need just two commands to start your adventure:
+It's easy:
 ```
 npm install
-gulp new
+npm run new
 ```
-And open the gates to the hell in the *build/index.html* !
+And check file *build/index.html* !
 
 ## Generating levels
 
-You can generate new level with options. Like this:
+You can choose level of difficulty by adding ```:<level>``` to your ```new``` command, for example ```npm run new:easy```. There is four levels: ```easy```, ```normal```, ```hard``` and ```nightmare```.
+
+Also you can generate level by your own as you wish.
 ```
-gulp new -size 3 -cohesion 2 -steps 4
+npm run new -- --size=3 --cohesion=2 --steps=4
 ```
 Few comments about it.
 
-```-size``` is side of square field in cells. For example if you set ```-size 3``` number of all cells will be 9.
+```--size``` is a size of side of square field in cells.
 
-```-cohesion``` is maximum number of linked cells. It means that number of cells that changing color with clickable cell cannot be more than number of _cohesion_.
+```--cohesion``` is maximum number of linked cells. It means that number of cells that changing color with clickable cell cannot be more than number of _cohesion_.
 
-```-steps``` is number of steps that will made to randomize field. Recommended to set it according to size of your field.
+```--steps``` is number of steps that will made to randomize field. Recommended to set it according to size of your field.

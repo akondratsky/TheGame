@@ -1,22 +1,18 @@
 .game-field {
+  display: flex;
+  width: $field-size * $cell-width + $border-width * 2;
+  flex-wrap: wrap;
 
-    display: flex;
-    width: $field-size * $cell-width + $border-width * 2;
-    flex-wrap: wrap;
+  @extend %border;
 
-    @extend %border;
+  &-text {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
 
-    &__text {
-        text-align: center;
-        color: white;
-        font-weight: 900;
-        font-size: 1.5em;
-    }
-
-    &__color {
-        color: $color-primary;
-    }
-
-
-
+  &-color {
+    color: $color-primary;
+  }
 }

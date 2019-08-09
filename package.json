@@ -4,21 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "new": "gulp new",
+    "new:easy": "gulp new --size=3 --cohesion=2 --steps=3",
+    "new:normal": "gulp new --size=5 --cohesion=4 --steps=10",
+    "new:hard": "gulp new --size=7 --cohesion=5 --steps=15",
+    "new:nightmare": "gulp new --size=10 --cohesion=8 --steps=42"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "del": "3.0.0",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-inject-string": "1.1.1",
     "gulp-remove-content": "1.0.1",
     "gulp-sass": "4.0.1",
-    "gulp-sequence": "1.0.0",
     "gulp-sourcemaps": "2.6.4",
     "merge-stream": "1.0.1",
-    "plugin-error": "1.0.1"
+    "yargs": "13.3.0"
   }
 }

@@ -1,20 +1,18 @@
 .cell {
+  max-height: $cell-width;
+  max-width: $cell-width;
+  overflow: hidden;
 
-    max-height: $cell-width;
-    max-width: $cell-width;
-    overflow: hidden;
+  @extend %border;
 
-    @extend %border;
+  &-bg {
+    display: block;
+    position: relative;
+    height: $cell-width - $border-width * 2;
+    width: $cell-width - $border-width * 2;
 
-    &__bg {
-
-        display: block;
-        position: relative;
-        height: $cell-width - $border-width * 2;
-        width: $cell-width - $border-width * 2;
-
-        background: repeating-linear-gradient($color-primary 0, $color-primary $cell-width, $color-secondary $cell-width, $color-secondary $cell-width*2);
-        background-size:  $cell-width $cell-width * $number-of-cells;
-        background-position-x: 0;
-    }
+    background: repeating-linear-gradient($color-primary 0, $color-primary $cell-width, $color-secondary $cell-width, $color-secondary $cell-width*2);
+    background-size:  $cell-width $cell-width * $number-of-cells;
+    background-position-x: 0;
+  }
 }

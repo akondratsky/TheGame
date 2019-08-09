@@ -1,49 +1,40 @@
 $wyp: ();
 
 @for $cell-number from 1 through $number-of-cells {
-    // --from-CURRENT-to-CURRENT
-    #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$cell-number} {
-        #{"--from-" + $cell-number + "-to-" + $cell-number}: $cell-width;
+  // --from-CURRENT-to-CURRENT
+  #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$cell-number} {
+    #{"--from-" + $cell-number + "-to-" + $cell-number}: $cell-width;
+  }
+  #cb#{$cell-number}:checked ~ .game-field #s#{$cell-number} {
+    #{"--from-" + $cell-number + "-to-" + $cell-number}: 0%;
+  }
+  //$bpy: ();
+  // --from-CURRENT-to-LINKED
+  @each $affecteds-array in nth($cells-links, $cell-number) {
+    //$bpy: #{ "bottom calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
+    @each $affected in $affecteds-array {
+      //$bpy: #{ $bpy + " + var(--from-" + $cell-number + "-to-" + $affected + ")"};
+      #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$affected} {
+        #{ "--from-" + $cell-number + "-to-" + $affected }: $cell-width;
+      }
+      #cb#{$cell-number}:checked ~ .game-field #s#{$affected} {
+        #{"--from-" + $cell-number + "-to-" + $affected}: 0%;
+      }
     }
-    #cb#{$cell-number}:checked ~ .game-field #s#{$cell-number} {
-        #{"--from-" + $cell-number + "-to-" + $cell-number}: 0%;
-    }
-    //$bpy: ();
-    // --from-CURRENT-to-LINKED
-    @each $affecteds-array in nth($cells-links, $cell-number) {
-        //$bpy: #{ "bottom calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
-        @each $affected in $affecteds-array {
-            //$bpy: #{ $bpy + " + var(--from-" + $cell-number + "-to-" + $affected + ")"};
-            #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$affected} {
-                #{ "--from-" + $cell-number + "-to-" + $affected }: $cell-width;
-            }
-            #cb#{$cell-number}:checked ~ .game-field #s#{$affected} {
-                #{"--from-" + $cell-number + "-to-" + $affected}: 0%;
-            }
-        }
-    }
+  }
 }
-
-
 
 @for $cell-number from 1 through $number-of-cells {
-
-    $bpy: ();
-    $bpy: #{ "calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
-    
-    @for $cn from 1 through $number-of-cells {
-        @if contains(nth($cells-links, $cn), $cell-number) {
-            $bpy: #{ $bpy + " + var(--from-" + $cn + "-to-" + $cell-number + ")"};
-        }
+  $bpy: ();
+  $bpy: #{ "calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
+  
+  @for $cn from 1 through $number-of-cells {
+    @if contains(nth($cells-links, $cn), $cell-number) {
+      $bpy: #{ $bpy + " + var(--from-" + $cn + "-to-" + $cell-number + ")"};
     }
+  }
 
-
-    #s#{$cell-number} {
-
-        background-position-y: #{ $bpy + " )" };
-    }
-}
-
-.won-window {
-    top: #{ $wyp };
+  #s#{$cell-number} {
+    background-position-y: #{ $bpy + " )" };
+  }
 }
