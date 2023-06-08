@@ -2,8 +2,23 @@
   border: $border-width $border-style $border-color;
 }
 
-@function contains($list,$var) {
+@function contains($list, $var) {
   $_out: false;
   @each $item in $list { @if $item == $var { $_out: true; } }
   @return $_out;
+}
+
+@function xorVars($k, $i) {
+  //  ( var(--k) - var(--i)) * (var(--k) - var(--i))
+  $diff: #{ "(" + $k + " - " + $i + ")"};
+  @return #{ "(" + $diff + " * " + $diff + ")"};
+}
+
+@function notVar($k) {
+  @return #{ "(1 - " + $k + ")" };
+}
+
+@function andVars($k, $i) {
+  // var(--k)*var(--i)
+  @return #{ "(" + $k " * " + $i + ")"};
 }

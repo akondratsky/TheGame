@@ -1,40 +1,55 @@
-$wyp: ();
-
 @for $cell-number from 1 through $number-of-cells {
-  // --from-CURRENT-to-CURRENT
-  #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$cell-number} {
-    #{"--from-" + $cell-number + "-to-" + $cell-number}: $cell-width;
+  /*
+    we set same --from-CURRENT-to-CURRENT - the problem of scope!
+    to cell's label
+    and to win rule
+  */
+  $var: #{"--from-" + $cell-number + "-to-" + $cell-number + "-inverted"};
+  #cb#{$cell-number}:not(:checked) ~ .scope {
+    #{$var}: 1;
   }
-  #cb#{$cell-number}:checked ~ .game-field #s#{$cell-number} {
-    #{"--from-" + $cell-number + "-to-" + $cell-number}: 0%;
+
+  #cb#{$cell-number}:checked ~ .scope {
+    #{$var}: 0;
   }
-  //$bpy: ();
-  // --from-CURRENT-to-LINKED
+
+  /*
+    do the same for all linked cell
+  */
   @each $affecteds-array in nth($cells-links, $cell-number) {
-    //$bpy: #{ "bottom calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
     @each $affected in $affecteds-array {
-      //$bpy: #{ $bpy + " + var(--from-" + $cell-number + "-to-" + $affected + ")"};
-      #cb#{$cell-number}:not(:checked) ~ .game-field #s#{$affected} {
-        #{ "--from-" + $cell-number + "-to-" + $affected }: $cell-width;
+      $var: #{ "--from-" + $cell-number + "-to-" + $affected + "-inverted" };
+      #cb#{$cell-number}:not(:checked) ~ .scope {
+        #{$var}: 1;
       }
-      #cb#{$cell-number}:checked ~ .game-field #s#{$affected} {
-        #{"--from-" + $cell-number + "-to-" + $affected}: 0%;
+      #cb#{$cell-number}:checked ~ .scope {
+          #{$var}: 0;
       }
     }
   }
 }
 
+/*
+  Each cell may invert other cells
+*/
 @for $cell-number from 1 through $number-of-cells {
-  $bpy: ();
-  $bpy: #{ "calc( " + $cell-width + " + var(--from-" + $cell-number + "-to-" + $cell-number + ")" };
-  
+  // is it inverted itself?
+  $inverted: #{ "var(--from-" + $cell-number + "-to-" + $cell-number + "-inverted)"};
+
   @for $cn from 1 through $number-of-cells {
     @if contains(nth($cells-links, $cn), $cell-number) {
-      $bpy: #{ $bpy + " + var(--from-" + $cn + "-to-" + $cell-number + ")"};
+      $currentInverted: #{ "var(--from-" + $cn + "-to-" + $cell-number + "-inverted)"};
+      $inverted: #{ xorVars($inverted, $currentInverted) };
     }
+  }
+  
+  $var: #{ "--" + $cell-number + "-inverted" };
+
+  .scope {
+    #{ $var }: calc(#{ $inverted });
   }
 
   #s#{$cell-number} {
-    background-position-y: #{ $bpy + " )" };
+    background-position-y: #{ "calc(var(" + $var + ") * " + $cell-width + " * 2)" };
   }
 }

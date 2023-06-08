@@ -24,7 +24,7 @@
 
 
 .win {
-  display: none;
+  display: inline-block;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -34,6 +34,7 @@
   text-transform: uppercase;
   font-weight: 900;
   user-select: none;
+  pointer-events: none;
 
   background-image: linear-gradient(
     -90deg,
@@ -58,15 +59,15 @@
     move 2s linear infinite;
 }
 
-$winRule: "#cb1:checked ";
-@for $cn from 2 through $number-of-cells {
-  $winRule: #{ $winRule + "~ #cb" + $cn + ":checked "};
-}
+.win {
+  $isWin: notVar("var(--1-inverted)");
+  @for $cn from 2 through $number-of-cells {
+    $isCurrentInverted: var( #{"--"+$cn+"-inverted"} );
+    $isWin: #{ andVars($isWin, notVar($isCurrentInverted) )};
+  }
+  $isWin: #{"calc(" + $isWin + ")"};
 
-#{ $winRule + "~ .win"} {
-  display: inline-block;
-}
+  --win: #{ $isWin };
 
-#{ $winRule + "~ .game-field"} {
-  pointer-events: none;
+  opacity: var(--win);
 }
