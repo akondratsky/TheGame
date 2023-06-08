@@ -1,0 +1,4317 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  display: none;
+}
+
+.list {
+  text-align: center;
+}
+.list-item {
+  margin: 0.5em;
+  font-size: 1.25em;
+}
+.list-item a {
+  text-decoration: none;
+}
+
+.link {
+  text-transform: uppercase;
+  color: #2F8621;
+}
+
+.game-field-text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.game-field-color {
+  color: #9E2730;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cell, .game-field {
+  border: 0.4vmin solid #000;
+}
+
+.game-field {
+  display: flex;
+  width: 80.8vmin;
+  flex-wrap: wrap;
+}
+
+#cb1:not(:checked) ~ .game-field #s1 {
+  --from-1-to-1: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s1 {
+  --from-1-to-1: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s81 {
+  --from-1-to-81: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s81 {
+  --from-1-to-81: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s55 {
+  --from-1-to-55: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s55 {
+  --from-1-to-55: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s11 {
+  --from-1-to-11: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s11 {
+  --from-1-to-11: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s97 {
+  --from-1-to-97: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s97 {
+  --from-1-to-97: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s48 {
+  --from-1-to-48: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s48 {
+  --from-1-to-48: 0%;
+}
+
+#cb1:not(:checked) ~ .game-field #s41 {
+  --from-1-to-41: 8vmin;
+}
+
+#cb1:checked ~ .game-field #s41 {
+  --from-1-to-41: 0%;
+}
+
+#cb2:not(:checked) ~ .game-field #s2 {
+  --from-2-to-2: 8vmin;
+}
+
+#cb2:checked ~ .game-field #s2 {
+  --from-2-to-2: 0%;
+}
+
+#cb2:not(:checked) ~ .game-field #s54 {
+  --from-2-to-54: 8vmin;
+}
+
+#cb2:checked ~ .game-field #s54 {
+  --from-2-to-54: 0%;
+}
+
+#cb2:not(:checked) ~ .game-field #s25 {
+  --from-2-to-25: 8vmin;
+}
+
+#cb2:checked ~ .game-field #s25 {
+  --from-2-to-25: 0%;
+}
+
+#cb2:not(:checked) ~ .game-field #s58 {
+  --from-2-to-58: 8vmin;
+}
+
+#cb2:checked ~ .game-field #s58 {
+  --from-2-to-58: 0%;
+}
+
+#cb3:not(:checked) ~ .game-field #s3 {
+  --from-3-to-3: 8vmin;
+}
+
+#cb3:checked ~ .game-field #s3 {
+  --from-3-to-3: 0%;
+}
+
+#cb3:not(:checked) ~ .game-field #s91 {
+  --from-3-to-91: 8vmin;
+}
+
+#cb3:checked ~ .game-field #s91 {
+  --from-3-to-91: 0%;
+}
+
+#cb3:not(:checked) ~ .game-field #s51 {
+  --from-3-to-51: 8vmin;
+}
+
+#cb3:checked ~ .game-field #s51 {
+  --from-3-to-51: 0%;
+}
+
+#cb3:not(:checked) ~ .game-field #s16 {
+  --from-3-to-16: 8vmin;
+}
+
+#cb3:checked ~ .game-field #s16 {
+  --from-3-to-16: 0%;
+}
+
+#cb4:not(:checked) ~ .game-field #s4 {
+  --from-4-to-4: 8vmin;
+}
+
+#cb4:checked ~ .game-field #s4 {
+  --from-4-to-4: 0%;
+}
+
+#cb4:not(:checked) ~ .game-field #s51 {
+  --from-4-to-51: 8vmin;
+}
+
+#cb4:checked ~ .game-field #s51 {
+  --from-4-to-51: 0%;
+}
+
+#cb4:not(:checked) ~ .game-field #s99 {
+  --from-4-to-99: 8vmin;
+}
+
+#cb4:checked ~ .game-field #s99 {
+  --from-4-to-99: 0%;
+}
+
+#cb4:not(:checked) ~ .game-field #s79 {
+  --from-4-to-79: 8vmin;
+}
+
+#cb4:checked ~ .game-field #s79 {
+  --from-4-to-79: 0%;
+}
+
+#cb5:not(:checked) ~ .game-field #s5 {
+  --from-5-to-5: 8vmin;
+}
+
+#cb5:checked ~ .game-field #s5 {
+  --from-5-to-5: 0%;
+}
+
+#cb5:not(:checked) ~ .game-field #s100 {
+  --from-5-to-100: 8vmin;
+}
+
+#cb5:checked ~ .game-field #s100 {
+  --from-5-to-100: 0%;
+}
+
+#cb5:not(:checked) ~ .game-field #s90 {
+  --from-5-to-90: 8vmin;
+}
+
+#cb5:checked ~ .game-field #s90 {
+  --from-5-to-90: 0%;
+}
+
+#cb5:not(:checked) ~ .game-field #s72 {
+  --from-5-to-72: 8vmin;
+}
+
+#cb5:checked ~ .game-field #s72 {
+  --from-5-to-72: 0%;
+}
+
+#cb5:not(:checked) ~ .game-field #s31 {
+  --from-5-to-31: 8vmin;
+}
+
+#cb5:checked ~ .game-field #s31 {
+  --from-5-to-31: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s6 {
+  --from-6-to-6: 8vmin;
+}
+
+#cb6:checked ~ .game-field #s6 {
+  --from-6-to-6: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s73 {
+  --from-6-to-73: 8vmin;
+}
+
+#cb6:checked ~ .game-field #s73 {
+  --from-6-to-73: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s67 {
+  --from-6-to-67: 8vmin;
+}
+
+#cb6:checked ~ .game-field #s67 {
+  --from-6-to-67: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s79 {
+  --from-6-to-79: 8vmin;
+}
+
+#cb6:checked ~ .game-field #s79 {
+  --from-6-to-79: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s95 {
+  --from-6-to-95: 8vmin;
+}
+
+#cb6:checked ~ .game-field #s95 {
+  --from-6-to-95: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s7 {
+  --from-7-to-7: 8vmin;
+}
+
+#cb7:checked ~ .game-field #s7 {
+  --from-7-to-7: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s54 {
+  --from-7-to-54: 8vmin;
+}
+
+#cb7:checked ~ .game-field #s54 {
+  --from-7-to-54: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s74 {
+  --from-7-to-74: 8vmin;
+}
+
+#cb7:checked ~ .game-field #s74 {
+  --from-7-to-74: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s51 {
+  --from-7-to-51: 8vmin;
+}
+
+#cb7:checked ~ .game-field #s51 {
+  --from-7-to-51: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s22 {
+  --from-7-to-22: 8vmin;
+}
+
+#cb7:checked ~ .game-field #s22 {
+  --from-7-to-22: 0%;
+}
+
+#cb8:not(:checked) ~ .game-field #s8 {
+  --from-8-to-8: 8vmin;
+}
+
+#cb8:checked ~ .game-field #s8 {
+  --from-8-to-8: 0%;
+}
+
+#cb8:not(:checked) ~ .game-field #s43 {
+  --from-8-to-43: 8vmin;
+}
+
+#cb8:checked ~ .game-field #s43 {
+  --from-8-to-43: 0%;
+}
+
+#cb8:not(:checked) ~ .game-field #s84 {
+  --from-8-to-84: 8vmin;
+}
+
+#cb8:checked ~ .game-field #s84 {
+  --from-8-to-84: 0%;
+}
+
+#cb8:not(:checked) ~ .game-field #s21 {
+  --from-8-to-21: 8vmin;
+}
+
+#cb8:checked ~ .game-field #s21 {
+  --from-8-to-21: 0%;
+}
+
+#cb9:not(:checked) ~ .game-field #s9 {
+  --from-9-to-9: 8vmin;
+}
+
+#cb9:checked ~ .game-field #s9 {
+  --from-9-to-9: 0%;
+}
+
+#cb9:not(:checked) ~ .game-field #s19 {
+  --from-9-to-19: 8vmin;
+}
+
+#cb9:checked ~ .game-field #s19 {
+  --from-9-to-19: 0%;
+}
+
+#cb9:not(:checked) ~ .game-field #s80 {
+  --from-9-to-80: 8vmin;
+}
+
+#cb9:checked ~ .game-field #s80 {
+  --from-9-to-80: 0%;
+}
+
+#cb9:not(:checked) ~ .game-field #s87 {
+  --from-9-to-87: 8vmin;
+}
+
+#cb9:checked ~ .game-field #s87 {
+  --from-9-to-87: 0%;
+}
+
+#cb10:not(:checked) ~ .game-field #s10 {
+  --from-10-to-10: 8vmin;
+}
+
+#cb10:checked ~ .game-field #s10 {
+  --from-10-to-10: 0%;
+}
+
+#cb10:not(:checked) ~ .game-field #s36 {
+  --from-10-to-36: 8vmin;
+}
+
+#cb10:checked ~ .game-field #s36 {
+  --from-10-to-36: 0%;
+}
+
+#cb10:not(:checked) ~ .game-field #s32 {
+  --from-10-to-32: 8vmin;
+}
+
+#cb10:checked ~ .game-field #s32 {
+  --from-10-to-32: 0%;
+}
+
+#cb10:not(:checked) ~ .game-field #s2 {
+  --from-10-to-2: 8vmin;
+}
+
+#cb10:checked ~ .game-field #s2 {
+  --from-10-to-2: 0%;
+}
+
+#cb11:not(:checked) ~ .game-field #s11 {
+  --from-11-to-11: 8vmin;
+}
+
+#cb11:checked ~ .game-field #s11 {
+  --from-11-to-11: 0%;
+}
+
+#cb11:not(:checked) ~ .game-field #s21 {
+  --from-11-to-21: 8vmin;
+}
+
+#cb11:checked ~ .game-field #s21 {
+  --from-11-to-21: 0%;
+}
+
+#cb11:not(:checked) ~ .game-field #s59 {
+  --from-11-to-59: 8vmin;
+}
+
+#cb11:checked ~ .game-field #s59 {
+  --from-11-to-59: 0%;
+}
+
+#cb11:not(:checked) ~ .game-field #s72 {
+  --from-11-to-72: 8vmin;
+}
+
+#cb11:checked ~ .game-field #s72 {
+  --from-11-to-72: 0%;
+}
+
+#cb11:not(:checked) ~ .game-field #s81 {
+  --from-11-to-81: 8vmin;
+}
+
+#cb11:checked ~ .game-field #s81 {
+  --from-11-to-81: 0%;
+}
+
+#cb12:not(:checked) ~ .game-field #s12 {
+  --from-12-to-12: 8vmin;
+}
+
+#cb12:checked ~ .game-field #s12 {
+  --from-12-to-12: 0%;
+}
+
+#cb12:not(:checked) ~ .game-field #s17 {
+  --from-12-to-17: 8vmin;
+}
+
+#cb12:checked ~ .game-field #s17 {
+  --from-12-to-17: 0%;
+}
+
+#cb12:not(:checked) ~ .game-field #s28 {
+  --from-12-to-28: 8vmin;
+}
+
+#cb12:checked ~ .game-field #s28 {
+  --from-12-to-28: 0%;
+}
+
+#cb12:not(:checked) ~ .game-field #s100 {
+  --from-12-to-100: 8vmin;
+}
+
+#cb12:checked ~ .game-field #s100 {
+  --from-12-to-100: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s13 {
+  --from-13-to-13: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s13 {
+  --from-13-to-13: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s91 {
+  --from-13-to-91: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s91 {
+  --from-13-to-91: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s89 {
+  --from-13-to-89: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s89 {
+  --from-13-to-89: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s15 {
+  --from-13-to-15: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s15 {
+  --from-13-to-15: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s40 {
+  --from-13-to-40: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s40 {
+  --from-13-to-40: 0%;
+}
+
+#cb13:not(:checked) ~ .game-field #s50 {
+  --from-13-to-50: 8vmin;
+}
+
+#cb13:checked ~ .game-field #s50 {
+  --from-13-to-50: 0%;
+}
+
+#cb14:not(:checked) ~ .game-field #s14 {
+  --from-14-to-14: 8vmin;
+}
+
+#cb14:checked ~ .game-field #s14 {
+  --from-14-to-14: 0%;
+}
+
+#cb14:not(:checked) ~ .game-field #s34 {
+  --from-14-to-34: 8vmin;
+}
+
+#cb14:checked ~ .game-field #s34 {
+  --from-14-to-34: 0%;
+}
+
+#cb15:not(:checked) ~ .game-field #s15 {
+  --from-15-to-15: 8vmin;
+}
+
+#cb15:checked ~ .game-field #s15 {
+  --from-15-to-15: 0%;
+}
+
+#cb15:not(:checked) ~ .game-field #s59 {
+  --from-15-to-59: 8vmin;
+}
+
+#cb15:checked ~ .game-field #s59 {
+  --from-15-to-59: 0%;
+}
+
+#cb15:not(:checked) ~ .game-field #s60 {
+  --from-15-to-60: 8vmin;
+}
+
+#cb15:checked ~ .game-field #s60 {
+  --from-15-to-60: 0%;
+}
+
+#cb15:not(:checked) ~ .game-field #s18 {
+  --from-15-to-18: 8vmin;
+}
+
+#cb15:checked ~ .game-field #s18 {
+  --from-15-to-18: 0%;
+}
+
+#cb15:not(:checked) ~ .game-field #s54 {
+  --from-15-to-54: 8vmin;
+}
+
+#cb15:checked ~ .game-field #s54 {
+  --from-15-to-54: 0%;
+}
+
+#cb16:not(:checked) ~ .game-field #s16 {
+  --from-16-to-16: 8vmin;
+}
+
+#cb16:checked ~ .game-field #s16 {
+  --from-16-to-16: 0%;
+}
+
+#cb16:not(:checked) ~ .game-field #s36 {
+  --from-16-to-36: 8vmin;
+}
+
+#cb16:checked ~ .game-field #s36 {
+  --from-16-to-36: 0%;
+}
+
+#cb16:not(:checked) ~ .game-field #s31 {
+  --from-16-to-31: 8vmin;
+}
+
+#cb16:checked ~ .game-field #s31 {
+  --from-16-to-31: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s17 {
+  --from-17-to-17: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s17 {
+  --from-17-to-17: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s22 {
+  --from-17-to-22: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s22 {
+  --from-17-to-22: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s60 {
+  --from-17-to-60: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s60 {
+  --from-17-to-60: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s97 {
+  --from-17-to-97: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s97 {
+  --from-17-to-97: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s30 {
+  --from-17-to-30: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s30 {
+  --from-17-to-30: 0%;
+}
+
+#cb17:not(:checked) ~ .game-field #s54 {
+  --from-17-to-54: 8vmin;
+}
+
+#cb17:checked ~ .game-field #s54 {
+  --from-17-to-54: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s18 {
+  --from-18-to-18: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s18 {
+  --from-18-to-18: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s96 {
+  --from-18-to-96: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s96 {
+  --from-18-to-96: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s80 {
+  --from-18-to-80: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s80 {
+  --from-18-to-80: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s16 {
+  --from-18-to-16: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s16 {
+  --from-18-to-16: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s47 {
+  --from-18-to-47: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s47 {
+  --from-18-to-47: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s85 {
+  --from-18-to-85: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s85 {
+  --from-18-to-85: 0%;
+}
+
+#cb18:not(:checked) ~ .game-field #s46 {
+  --from-18-to-46: 8vmin;
+}
+
+#cb18:checked ~ .game-field #s46 {
+  --from-18-to-46: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s19 {
+  --from-19-to-19: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s19 {
+  --from-19-to-19: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s74 {
+  --from-19-to-74: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s74 {
+  --from-19-to-74: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s82 {
+  --from-19-to-82: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s82 {
+  --from-19-to-82: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s17 {
+  --from-19-to-17: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s17 {
+  --from-19-to-17: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s10 {
+  --from-19-to-10: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s10 {
+  --from-19-to-10: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s92 {
+  --from-19-to-92: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s92 {
+  --from-19-to-92: 0%;
+}
+
+#cb19:not(:checked) ~ .game-field #s50 {
+  --from-19-to-50: 8vmin;
+}
+
+#cb19:checked ~ .game-field #s50 {
+  --from-19-to-50: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s20 {
+  --from-20-to-20: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s20 {
+  --from-20-to-20: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s73 {
+  --from-20-to-73: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s73 {
+  --from-20-to-73: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s8 {
+  --from-20-to-8: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s8 {
+  --from-20-to-8: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s83 {
+  --from-20-to-83: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s83 {
+  --from-20-to-83: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s50 {
+  --from-20-to-50: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s50 {
+  --from-20-to-50: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s23 {
+  --from-20-to-23: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s23 {
+  --from-20-to-23: 0%;
+}
+
+#cb20:not(:checked) ~ .game-field #s42 {
+  --from-20-to-42: 8vmin;
+}
+
+#cb20:checked ~ .game-field #s42 {
+  --from-20-to-42: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s21 {
+  --from-21-to-21: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s21 {
+  --from-21-to-21: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s81 {
+  --from-21-to-81: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s81 {
+  --from-21-to-81: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s85 {
+  --from-21-to-85: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s85 {
+  --from-21-to-85: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s20 {
+  --from-21-to-20: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s20 {
+  --from-21-to-20: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s15 {
+  --from-21-to-15: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s15 {
+  --from-21-to-15: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s74 {
+  --from-21-to-74: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s74 {
+  --from-21-to-74: 0%;
+}
+
+#cb21:not(:checked) ~ .game-field #s89 {
+  --from-21-to-89: 8vmin;
+}
+
+#cb21:checked ~ .game-field #s89 {
+  --from-21-to-89: 0%;
+}
+
+#cb22:not(:checked) ~ .game-field #s22 {
+  --from-22-to-22: 8vmin;
+}
+
+#cb22:checked ~ .game-field #s22 {
+  --from-22-to-22: 0%;
+}
+
+#cb22:not(:checked) ~ .game-field #s95 {
+  --from-22-to-95: 8vmin;
+}
+
+#cb22:checked ~ .game-field #s95 {
+  --from-22-to-95: 0%;
+}
+
+#cb22:not(:checked) ~ .game-field #s55 {
+  --from-22-to-55: 8vmin;
+}
+
+#cb22:checked ~ .game-field #s55 {
+  --from-22-to-55: 0%;
+}
+
+#cb22:not(:checked) ~ .game-field #s61 {
+  --from-22-to-61: 8vmin;
+}
+
+#cb22:checked ~ .game-field #s61 {
+  --from-22-to-61: 0%;
+}
+
+#cb22:not(:checked) ~ .game-field #s5 {
+  --from-22-to-5: 8vmin;
+}
+
+#cb22:checked ~ .game-field #s5 {
+  --from-22-to-5: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s23 {
+  --from-23-to-23: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s23 {
+  --from-23-to-23: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s80 {
+  --from-23-to-80: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s80 {
+  --from-23-to-80: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s25 {
+  --from-23-to-25: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s25 {
+  --from-23-to-25: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s5 {
+  --from-23-to-5: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s5 {
+  --from-23-to-5: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s40 {
+  --from-23-to-40: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s40 {
+  --from-23-to-40: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s89 {
+  --from-23-to-89: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s89 {
+  --from-23-to-89: 0%;
+}
+
+#cb23:not(:checked) ~ .game-field #s84 {
+  --from-23-to-84: 8vmin;
+}
+
+#cb23:checked ~ .game-field #s84 {
+  --from-23-to-84: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s24 {
+  --from-24-to-24: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s24 {
+  --from-24-to-24: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s5 {
+  --from-24-to-5: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s5 {
+  --from-24-to-5: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s54 {
+  --from-24-to-54: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s54 {
+  --from-24-to-54: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s37 {
+  --from-24-to-37: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s37 {
+  --from-24-to-37: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s23 {
+  --from-24-to-23: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s23 {
+  --from-24-to-23: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s25 {
+  --from-24-to-25: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s25 {
+  --from-24-to-25: 0%;
+}
+
+#cb24:not(:checked) ~ .game-field #s71 {
+  --from-24-to-71: 8vmin;
+}
+
+#cb24:checked ~ .game-field #s71 {
+  --from-24-to-71: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s25 {
+  --from-25-to-25: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s25 {
+  --from-25-to-25: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s63 {
+  --from-25-to-63: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s63 {
+  --from-25-to-63: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s11 {
+  --from-25-to-11: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s11 {
+  --from-25-to-11: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s18 {
+  --from-25-to-18: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s18 {
+  --from-25-to-18: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s8 {
+  --from-25-to-8: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s8 {
+  --from-25-to-8: 0%;
+}
+
+#cb25:not(:checked) ~ .game-field #s21 {
+  --from-25-to-21: 8vmin;
+}
+
+#cb25:checked ~ .game-field #s21 {
+  --from-25-to-21: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s26 {
+  --from-26-to-26: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s26 {
+  --from-26-to-26: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s76 {
+  --from-26-to-76: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s76 {
+  --from-26-to-76: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s99 {
+  --from-26-to-99: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s99 {
+  --from-26-to-99: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s52 {
+  --from-26-to-52: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s52 {
+  --from-26-to-52: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s74 {
+  --from-26-to-74: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s74 {
+  --from-26-to-74: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s22 {
+  --from-26-to-22: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s22 {
+  --from-26-to-22: 0%;
+}
+
+#cb26:not(:checked) ~ .game-field #s69 {
+  --from-26-to-69: 8vmin;
+}
+
+#cb26:checked ~ .game-field #s69 {
+  --from-26-to-69: 0%;
+}
+
+#cb27:not(:checked) ~ .game-field #s27 {
+  --from-27-to-27: 8vmin;
+}
+
+#cb27:checked ~ .game-field #s27 {
+  --from-27-to-27: 0%;
+}
+
+#cb27:not(:checked) ~ .game-field #s73 {
+  --from-27-to-73: 8vmin;
+}
+
+#cb27:checked ~ .game-field #s73 {
+  --from-27-to-73: 0%;
+}
+
+#cb28:not(:checked) ~ .game-field #s28 {
+  --from-28-to-28: 8vmin;
+}
+
+#cb28:checked ~ .game-field #s28 {
+  --from-28-to-28: 0%;
+}
+
+#cb28:not(:checked) ~ .game-field #s22 {
+  --from-28-to-22: 8vmin;
+}
+
+#cb28:checked ~ .game-field #s22 {
+  --from-28-to-22: 0%;
+}
+
+#cb28:not(:checked) ~ .game-field #s63 {
+  --from-28-to-63: 8vmin;
+}
+
+#cb28:checked ~ .game-field #s63 {
+  --from-28-to-63: 0%;
+}
+
+#cb29:not(:checked) ~ .game-field #s29 {
+  --from-29-to-29: 8vmin;
+}
+
+#cb29:checked ~ .game-field #s29 {
+  --from-29-to-29: 0%;
+}
+
+#cb29:not(:checked) ~ .game-field #s51 {
+  --from-29-to-51: 8vmin;
+}
+
+#cb29:checked ~ .game-field #s51 {
+  --from-29-to-51: 0%;
+}
+
+#cb29:not(:checked) ~ .game-field #s8 {
+  --from-29-to-8: 8vmin;
+}
+
+#cb29:checked ~ .game-field #s8 {
+  --from-29-to-8: 0%;
+}
+
+#cb29:not(:checked) ~ .game-field #s81 {
+  --from-29-to-81: 8vmin;
+}
+
+#cb29:checked ~ .game-field #s81 {
+  --from-29-to-81: 0%;
+}
+
+#cb30:not(:checked) ~ .game-field #s30 {
+  --from-30-to-30: 8vmin;
+}
+
+#cb30:checked ~ .game-field #s30 {
+  --from-30-to-30: 0%;
+}
+
+#cb30:not(:checked) ~ .game-field #s66 {
+  --from-30-to-66: 8vmin;
+}
+
+#cb30:checked ~ .game-field #s66 {
+  --from-30-to-66: 0%;
+}
+
+#cb30:not(:checked) ~ .game-field #s73 {
+  --from-30-to-73: 8vmin;
+}
+
+#cb30:checked ~ .game-field #s73 {
+  --from-30-to-73: 0%;
+}
+
+#cb30:not(:checked) ~ .game-field #s4 {
+  --from-30-to-4: 8vmin;
+}
+
+#cb30:checked ~ .game-field #s4 {
+  --from-30-to-4: 0%;
+}
+
+#cb31:not(:checked) ~ .game-field #s31 {
+  --from-31-to-31: 8vmin;
+}
+
+#cb31:checked ~ .game-field #s31 {
+  --from-31-to-31: 0%;
+}
+
+#cb31:not(:checked) ~ .game-field #s17 {
+  --from-31-to-17: 8vmin;
+}
+
+#cb31:checked ~ .game-field #s17 {
+  --from-31-to-17: 0%;
+}
+
+#cb31:not(:checked) ~ .game-field #s85 {
+  --from-31-to-85: 8vmin;
+}
+
+#cb31:checked ~ .game-field #s85 {
+  --from-31-to-85: 0%;
+}
+
+#cb31:not(:checked) ~ .game-field #s55 {
+  --from-31-to-55: 8vmin;
+}
+
+#cb31:checked ~ .game-field #s55 {
+  --from-31-to-55: 0%;
+}
+
+#cb31:not(:checked) ~ .game-field #s22 {
+  --from-31-to-22: 8vmin;
+}
+
+#cb31:checked ~ .game-field #s22 {
+  --from-31-to-22: 0%;
+}
+
+#cb32:not(:checked) ~ .game-field #s32 {
+  --from-32-to-32: 8vmin;
+}
+
+#cb32:checked ~ .game-field #s32 {
+  --from-32-to-32: 0%;
+}
+
+#cb32:not(:checked) ~ .game-field #s65 {
+  --from-32-to-65: 8vmin;
+}
+
+#cb32:checked ~ .game-field #s65 {
+  --from-32-to-65: 0%;
+}
+
+#cb32:not(:checked) ~ .game-field #s49 {
+  --from-32-to-49: 8vmin;
+}
+
+#cb32:checked ~ .game-field #s49 {
+  --from-32-to-49: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s33 {
+  --from-33-to-33: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s33 {
+  --from-33-to-33: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s78 {
+  --from-33-to-78: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s78 {
+  --from-33-to-78: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s24 {
+  --from-33-to-24: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s24 {
+  --from-33-to-24: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s70 {
+  --from-33-to-70: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s70 {
+  --from-33-to-70: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s56 {
+  --from-33-to-56: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s56 {
+  --from-33-to-56: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s84 {
+  --from-33-to-84: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s84 {
+  --from-33-to-84: 0%;
+}
+
+#cb33:not(:checked) ~ .game-field #s29 {
+  --from-33-to-29: 8vmin;
+}
+
+#cb33:checked ~ .game-field #s29 {
+  --from-33-to-29: 0%;
+}
+
+#cb34:not(:checked) ~ .game-field #s34 {
+  --from-34-to-34: 8vmin;
+}
+
+#cb34:checked ~ .game-field #s34 {
+  --from-34-to-34: 0%;
+}
+
+#cb34:not(:checked) ~ .game-field #s31 {
+  --from-34-to-31: 8vmin;
+}
+
+#cb34:checked ~ .game-field #s31 {
+  --from-34-to-31: 0%;
+}
+
+#cb35:not(:checked) ~ .game-field #s35 {
+  --from-35-to-35: 8vmin;
+}
+
+#cb35:checked ~ .game-field #s35 {
+  --from-35-to-35: 0%;
+}
+
+#cb35:not(:checked) ~ .game-field #s76 {
+  --from-35-to-76: 8vmin;
+}
+
+#cb35:checked ~ .game-field #s76 {
+  --from-35-to-76: 0%;
+}
+
+#cb35:not(:checked) ~ .game-field #s98 {
+  --from-35-to-98: 8vmin;
+}
+
+#cb35:checked ~ .game-field #s98 {
+  --from-35-to-98: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s36 {
+  --from-36-to-36: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s36 {
+  --from-36-to-36: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s89 {
+  --from-36-to-89: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s89 {
+  --from-36-to-89: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s33 {
+  --from-36-to-33: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s33 {
+  --from-36-to-33: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s68 {
+  --from-36-to-68: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s68 {
+  --from-36-to-68: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s24 {
+  --from-36-to-24: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s24 {
+  --from-36-to-24: 0%;
+}
+
+#cb36:not(:checked) ~ .game-field #s81 {
+  --from-36-to-81: 8vmin;
+}
+
+#cb36:checked ~ .game-field #s81 {
+  --from-36-to-81: 0%;
+}
+
+#cb37:not(:checked) ~ .game-field #s37 {
+  --from-37-to-37: 8vmin;
+}
+
+#cb37:checked ~ .game-field #s37 {
+  --from-37-to-37: 0%;
+}
+
+#cb37:not(:checked) ~ .game-field #s54 {
+  --from-37-to-54: 8vmin;
+}
+
+#cb37:checked ~ .game-field #s54 {
+  --from-37-to-54: 0%;
+}
+
+#cb37:not(:checked) ~ .game-field #s50 {
+  --from-37-to-50: 8vmin;
+}
+
+#cb37:checked ~ .game-field #s50 {
+  --from-37-to-50: 0%;
+}
+
+#cb38:not(:checked) ~ .game-field #s38 {
+  --from-38-to-38: 8vmin;
+}
+
+#cb38:checked ~ .game-field #s38 {
+  --from-38-to-38: 0%;
+}
+
+#cb38:not(:checked) ~ .game-field #s64 {
+  --from-38-to-64: 8vmin;
+}
+
+#cb38:checked ~ .game-field #s64 {
+  --from-38-to-64: 0%;
+}
+
+#cb38:not(:checked) ~ .game-field #s40 {
+  --from-38-to-40: 8vmin;
+}
+
+#cb38:checked ~ .game-field #s40 {
+  --from-38-to-40: 0%;
+}
+
+#cb38:not(:checked) ~ .game-field #s7 {
+  --from-38-to-7: 8vmin;
+}
+
+#cb38:checked ~ .game-field #s7 {
+  --from-38-to-7: 0%;
+}
+
+#cb38:not(:checked) ~ .game-field #s72 {
+  --from-38-to-72: 8vmin;
+}
+
+#cb38:checked ~ .game-field #s72 {
+  --from-38-to-72: 0%;
+}
+
+#cb39:not(:checked) ~ .game-field #s39 {
+  --from-39-to-39: 8vmin;
+}
+
+#cb39:checked ~ .game-field #s39 {
+  --from-39-to-39: 0%;
+}
+
+#cb39:not(:checked) ~ .game-field #s73 {
+  --from-39-to-73: 8vmin;
+}
+
+#cb39:checked ~ .game-field #s73 {
+  --from-39-to-73: 0%;
+}
+
+#cb39:not(:checked) ~ .game-field #s20 {
+  --from-39-to-20: 8vmin;
+}
+
+#cb39:checked ~ .game-field #s20 {
+  --from-39-to-20: 0%;
+}
+
+#cb39:not(:checked) ~ .game-field #s15 {
+  --from-39-to-15: 8vmin;
+}
+
+#cb39:checked ~ .game-field #s15 {
+  --from-39-to-15: 0%;
+}
+
+#cb39:not(:checked) ~ .game-field #s22 {
+  --from-39-to-22: 8vmin;
+}
+
+#cb39:checked ~ .game-field #s22 {
+  --from-39-to-22: 0%;
+}
+
+#cb40:not(:checked) ~ .game-field #s40 {
+  --from-40-to-40: 8vmin;
+}
+
+#cb40:checked ~ .game-field #s40 {
+  --from-40-to-40: 0%;
+}
+
+#cb40:not(:checked) ~ .game-field #s5 {
+  --from-40-to-5: 8vmin;
+}
+
+#cb40:checked ~ .game-field #s5 {
+  --from-40-to-5: 0%;
+}
+
+#cb40:not(:checked) ~ .game-field #s30 {
+  --from-40-to-30: 8vmin;
+}
+
+#cb40:checked ~ .game-field #s30 {
+  --from-40-to-30: 0%;
+}
+
+#cb40:not(:checked) ~ .game-field #s57 {
+  --from-40-to-57: 8vmin;
+}
+
+#cb40:checked ~ .game-field #s57 {
+  --from-40-to-57: 0%;
+}
+
+#cb40:not(:checked) ~ .game-field #s38 {
+  --from-40-to-38: 8vmin;
+}
+
+#cb40:checked ~ .game-field #s38 {
+  --from-40-to-38: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s41 {
+  --from-41-to-41: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s41 {
+  --from-41-to-41: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s57 {
+  --from-41-to-57: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s57 {
+  --from-41-to-57: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s92 {
+  --from-41-to-92: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s92 {
+  --from-41-to-92: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s35 {
+  --from-41-to-35: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s35 {
+  --from-41-to-35: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s71 {
+  --from-41-to-71: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s71 {
+  --from-41-to-71: 0%;
+}
+
+#cb41:not(:checked) ~ .game-field #s48 {
+  --from-41-to-48: 8vmin;
+}
+
+#cb41:checked ~ .game-field #s48 {
+  --from-41-to-48: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s42 {
+  --from-42-to-42: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s42 {
+  --from-42-to-42: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s71 {
+  --from-42-to-71: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s71 {
+  --from-42-to-71: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s5 {
+  --from-42-to-5: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s5 {
+  --from-42-to-5: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s9 {
+  --from-42-to-9: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s9 {
+  --from-42-to-9: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s62 {
+  --from-42-to-62: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s62 {
+  --from-42-to-62: 0%;
+}
+
+#cb42:not(:checked) ~ .game-field #s95 {
+  --from-42-to-95: 8vmin;
+}
+
+#cb42:checked ~ .game-field #s95 {
+  --from-42-to-95: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s43 {
+  --from-43-to-43: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s43 {
+  --from-43-to-43: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s52 {
+  --from-43-to-52: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s52 {
+  --from-43-to-52: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s28 {
+  --from-43-to-28: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s28 {
+  --from-43-to-28: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s67 {
+  --from-43-to-67: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s67 {
+  --from-43-to-67: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s44 {
+  --from-43-to-44: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s44 {
+  --from-43-to-44: 0%;
+}
+
+#cb43:not(:checked) ~ .game-field #s69 {
+  --from-43-to-69: 8vmin;
+}
+
+#cb43:checked ~ .game-field #s69 {
+  --from-43-to-69: 0%;
+}
+
+#cb44:not(:checked) ~ .game-field #s44 {
+  --from-44-to-44: 8vmin;
+}
+
+#cb44:checked ~ .game-field #s44 {
+  --from-44-to-44: 0%;
+}
+
+#cb44:not(:checked) ~ .game-field #s30 {
+  --from-44-to-30: 8vmin;
+}
+
+#cb44:checked ~ .game-field #s30 {
+  --from-44-to-30: 0%;
+}
+
+#cb44:not(:checked) ~ .game-field #s41 {
+  --from-44-to-41: 8vmin;
+}
+
+#cb44:checked ~ .game-field #s41 {
+  --from-44-to-41: 0%;
+}
+
+#cb45:not(:checked) ~ .game-field #s45 {
+  --from-45-to-45: 8vmin;
+}
+
+#cb45:checked ~ .game-field #s45 {
+  --from-45-to-45: 0%;
+}
+
+#cb45:not(:checked) ~ .game-field #s90 {
+  --from-45-to-90: 8vmin;
+}
+
+#cb45:checked ~ .game-field #s90 {
+  --from-45-to-90: 0%;
+}
+
+#cb45:not(:checked) ~ .game-field #s95 {
+  --from-45-to-95: 8vmin;
+}
+
+#cb45:checked ~ .game-field #s95 {
+  --from-45-to-95: 0%;
+}
+
+#cb45:not(:checked) ~ .game-field #s67 {
+  --from-45-to-67: 8vmin;
+}
+
+#cb45:checked ~ .game-field #s67 {
+  --from-45-to-67: 0%;
+}
+
+#cb46:not(:checked) ~ .game-field #s46 {
+  --from-46-to-46: 8vmin;
+}
+
+#cb46:checked ~ .game-field #s46 {
+  --from-46-to-46: 0%;
+}
+
+#cb46:not(:checked) ~ .game-field #s33 {
+  --from-46-to-33: 8vmin;
+}
+
+#cb46:checked ~ .game-field #s33 {
+  --from-46-to-33: 0%;
+}
+
+#cb46:not(:checked) ~ .game-field #s10 {
+  --from-46-to-10: 8vmin;
+}
+
+#cb46:checked ~ .game-field #s10 {
+  --from-46-to-10: 0%;
+}
+
+#cb46:not(:checked) ~ .game-field #s35 {
+  --from-46-to-35: 8vmin;
+}
+
+#cb46:checked ~ .game-field #s35 {
+  --from-46-to-35: 0%;
+}
+
+#cb46:not(:checked) ~ .game-field #s79 {
+  --from-46-to-79: 8vmin;
+}
+
+#cb46:checked ~ .game-field #s79 {
+  --from-46-to-79: 0%;
+}
+
+#cb47:not(:checked) ~ .game-field #s47 {
+  --from-47-to-47: 8vmin;
+}
+
+#cb47:checked ~ .game-field #s47 {
+  --from-47-to-47: 0%;
+}
+
+#cb47:not(:checked) ~ .game-field #s70 {
+  --from-47-to-70: 8vmin;
+}
+
+#cb47:checked ~ .game-field #s70 {
+  --from-47-to-70: 0%;
+}
+
+#cb47:not(:checked) ~ .game-field #s7 {
+  --from-47-to-7: 8vmin;
+}
+
+#cb47:checked ~ .game-field #s7 {
+  --from-47-to-7: 0%;
+}
+
+#cb47:not(:checked) ~ .game-field #s85 {
+  --from-47-to-85: 8vmin;
+}
+
+#cb47:checked ~ .game-field #s85 {
+  --from-47-to-85: 0%;
+}
+
+#cb48:not(:checked) ~ .game-field #s48 {
+  --from-48-to-48: 8vmin;
+}
+
+#cb48:checked ~ .game-field #s48 {
+  --from-48-to-48: 0%;
+}
+
+#cb48:not(:checked) ~ .game-field #s39 {
+  --from-48-to-39: 8vmin;
+}
+
+#cb48:checked ~ .game-field #s39 {
+  --from-48-to-39: 0%;
+}
+
+#cb48:not(:checked) ~ .game-field #s25 {
+  --from-48-to-25: 8vmin;
+}
+
+#cb48:checked ~ .game-field #s25 {
+  --from-48-to-25: 0%;
+}
+
+#cb49:not(:checked) ~ .game-field #s49 {
+  --from-49-to-49: 8vmin;
+}
+
+#cb49:checked ~ .game-field #s49 {
+  --from-49-to-49: 0%;
+}
+
+#cb49:not(:checked) ~ .game-field #s100 {
+  --from-49-to-100: 8vmin;
+}
+
+#cb49:checked ~ .game-field #s100 {
+  --from-49-to-100: 0%;
+}
+
+#cb49:not(:checked) ~ .game-field #s80 {
+  --from-49-to-80: 8vmin;
+}
+
+#cb49:checked ~ .game-field #s80 {
+  --from-49-to-80: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s50 {
+  --from-50-to-50: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s50 {
+  --from-50-to-50: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s91 {
+  --from-50-to-91: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s91 {
+  --from-50-to-91: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s66 {
+  --from-50-to-66: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s66 {
+  --from-50-to-66: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s56 {
+  --from-50-to-56: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s56 {
+  --from-50-to-56: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s53 {
+  --from-50-to-53: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s53 {
+  --from-50-to-53: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s8 {
+  --from-50-to-8: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s8 {
+  --from-50-to-8: 0%;
+}
+
+#cb50:not(:checked) ~ .game-field #s3 {
+  --from-50-to-3: 8vmin;
+}
+
+#cb50:checked ~ .game-field #s3 {
+  --from-50-to-3: 0%;
+}
+
+#cb51:not(:checked) ~ .game-field #s51 {
+  --from-51-to-51: 8vmin;
+}
+
+#cb51:checked ~ .game-field #s51 {
+  --from-51-to-51: 0%;
+}
+
+#cb51:not(:checked) ~ .game-field #s38 {
+  --from-51-to-38: 8vmin;
+}
+
+#cb51:checked ~ .game-field #s38 {
+  --from-51-to-38: 0%;
+}
+
+#cb51:not(:checked) ~ .game-field #s33 {
+  --from-51-to-33: 8vmin;
+}
+
+#cb51:checked ~ .game-field #s33 {
+  --from-51-to-33: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s52 {
+  --from-52-to-52: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s52 {
+  --from-52-to-52: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s89 {
+  --from-52-to-89: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s89 {
+  --from-52-to-89: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s68 {
+  --from-52-to-68: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s68 {
+  --from-52-to-68: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s66 {
+  --from-52-to-66: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s66 {
+  --from-52-to-66: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s65 {
+  --from-52-to-65: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s65 {
+  --from-52-to-65: 0%;
+}
+
+#cb52:not(:checked) ~ .game-field #s15 {
+  --from-52-to-15: 8vmin;
+}
+
+#cb52:checked ~ .game-field #s15 {
+  --from-52-to-15: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s53 {
+  --from-53-to-53: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s53 {
+  --from-53-to-53: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s73 {
+  --from-53-to-73: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s73 {
+  --from-53-to-73: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s22 {
+  --from-53-to-22: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s22 {
+  --from-53-to-22: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s87 {
+  --from-53-to-87: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s87 {
+  --from-53-to-87: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s49 {
+  --from-53-to-49: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s49 {
+  --from-53-to-49: 0%;
+}
+
+#cb53:not(:checked) ~ .game-field #s98 {
+  --from-53-to-98: 8vmin;
+}
+
+#cb53:checked ~ .game-field #s98 {
+  --from-53-to-98: 0%;
+}
+
+#cb54:not(:checked) ~ .game-field #s54 {
+  --from-54-to-54: 8vmin;
+}
+
+#cb54:checked ~ .game-field #s54 {
+  --from-54-to-54: 0%;
+}
+
+#cb54:not(:checked) ~ .game-field #s81 {
+  --from-54-to-81: 8vmin;
+}
+
+#cb54:checked ~ .game-field #s81 {
+  --from-54-to-81: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s55 {
+  --from-55-to-55: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s55 {
+  --from-55-to-55: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s6 {
+  --from-55-to-6: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s6 {
+  --from-55-to-6: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s32 {
+  --from-55-to-32: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s32 {
+  --from-55-to-32: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s95 {
+  --from-55-to-95: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s95 {
+  --from-55-to-95: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s96 {
+  --from-55-to-96: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s96 {
+  --from-55-to-96: 0%;
+}
+
+#cb55:not(:checked) ~ .game-field #s90 {
+  --from-55-to-90: 8vmin;
+}
+
+#cb55:checked ~ .game-field #s90 {
+  --from-55-to-90: 0%;
+}
+
+#cb56:not(:checked) ~ .game-field #s56 {
+  --from-56-to-56: 8vmin;
+}
+
+#cb56:checked ~ .game-field #s56 {
+  --from-56-to-56: 0%;
+}
+
+#cb56:not(:checked) ~ .game-field #s95 {
+  --from-56-to-95: 8vmin;
+}
+
+#cb56:checked ~ .game-field #s95 {
+  --from-56-to-95: 0%;
+}
+
+#cb56:not(:checked) ~ .game-field #s59 {
+  --from-56-to-59: 8vmin;
+}
+
+#cb56:checked ~ .game-field #s59 {
+  --from-56-to-59: 0%;
+}
+
+#cb56:not(:checked) ~ .game-field #s99 {
+  --from-56-to-99: 8vmin;
+}
+
+#cb56:checked ~ .game-field #s99 {
+  --from-56-to-99: 0%;
+}
+
+#cb57:not(:checked) ~ .game-field #s57 {
+  --from-57-to-57: 8vmin;
+}
+
+#cb57:checked ~ .game-field #s57 {
+  --from-57-to-57: 0%;
+}
+
+#cb57:not(:checked) ~ .game-field #s85 {
+  --from-57-to-85: 8vmin;
+}
+
+#cb57:checked ~ .game-field #s85 {
+  --from-57-to-85: 0%;
+}
+
+#cb57:not(:checked) ~ .game-field #s14 {
+  --from-57-to-14: 8vmin;
+}
+
+#cb57:checked ~ .game-field #s14 {
+  --from-57-to-14: 0%;
+}
+
+#cb58:not(:checked) ~ .game-field #s58 {
+  --from-58-to-58: 8vmin;
+}
+
+#cb58:checked ~ .game-field #s58 {
+  --from-58-to-58: 0%;
+}
+
+#cb58:not(:checked) ~ .game-field #s98 {
+  --from-58-to-98: 8vmin;
+}
+
+#cb58:checked ~ .game-field #s98 {
+  --from-58-to-98: 0%;
+}
+
+#cb58:not(:checked) ~ .game-field #s61 {
+  --from-58-to-61: 8vmin;
+}
+
+#cb58:checked ~ .game-field #s61 {
+  --from-58-to-61: 0%;
+}
+
+#cb58:not(:checked) ~ .game-field #s68 {
+  --from-58-to-68: 8vmin;
+}
+
+#cb58:checked ~ .game-field #s68 {
+  --from-58-to-68: 0%;
+}
+
+#cb58:not(:checked) ~ .game-field #s48 {
+  --from-58-to-48: 8vmin;
+}
+
+#cb58:checked ~ .game-field #s48 {
+  --from-58-to-48: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s59 {
+  --from-59-to-59: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s59 {
+  --from-59-to-59: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s31 {
+  --from-59-to-31: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s31 {
+  --from-59-to-31: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s22 {
+  --from-59-to-22: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s22 {
+  --from-59-to-22: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s68 {
+  --from-59-to-68: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s68 {
+  --from-59-to-68: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s70 {
+  --from-59-to-70: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s70 {
+  --from-59-to-70: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s28 {
+  --from-59-to-28: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s28 {
+  --from-59-to-28: 0%;
+}
+
+#cb59:not(:checked) ~ .game-field #s26 {
+  --from-59-to-26: 8vmin;
+}
+
+#cb59:checked ~ .game-field #s26 {
+  --from-59-to-26: 0%;
+}
+
+#cb60:not(:checked) ~ .game-field #s60 {
+  --from-60-to-60: 8vmin;
+}
+
+#cb60:checked ~ .game-field #s60 {
+  --from-60-to-60: 0%;
+}
+
+#cb60:not(:checked) ~ .game-field #s52 {
+  --from-60-to-52: 8vmin;
+}
+
+#cb60:checked ~ .game-field #s52 {
+  --from-60-to-52: 0%;
+}
+
+#cb60:not(:checked) ~ .game-field #s4 {
+  --from-60-to-4: 8vmin;
+}
+
+#cb60:checked ~ .game-field #s4 {
+  --from-60-to-4: 0%;
+}
+
+#cb60:not(:checked) ~ .game-field #s27 {
+  --from-60-to-27: 8vmin;
+}
+
+#cb60:checked ~ .game-field #s27 {
+  --from-60-to-27: 0%;
+}
+
+#cb60:not(:checked) ~ .game-field #s97 {
+  --from-60-to-97: 8vmin;
+}
+
+#cb60:checked ~ .game-field #s97 {
+  --from-60-to-97: 0%;
+}
+
+#cb61:not(:checked) ~ .game-field #s61 {
+  --from-61-to-61: 8vmin;
+}
+
+#cb61:checked ~ .game-field #s61 {
+  --from-61-to-61: 0%;
+}
+
+#cb61:not(:checked) ~ .game-field #s84 {
+  --from-61-to-84: 8vmin;
+}
+
+#cb61:checked ~ .game-field #s84 {
+  --from-61-to-84: 0%;
+}
+
+#cb61:not(:checked) ~ .game-field #s93 {
+  --from-61-to-93: 8vmin;
+}
+
+#cb61:checked ~ .game-field #s93 {
+  --from-61-to-93: 0%;
+}
+
+#cb62:not(:checked) ~ .game-field #s62 {
+  --from-62-to-62: 8vmin;
+}
+
+#cb62:checked ~ .game-field #s62 {
+  --from-62-to-62: 0%;
+}
+
+#cb62:not(:checked) ~ .game-field #s30 {
+  --from-62-to-30: 8vmin;
+}
+
+#cb62:checked ~ .game-field #s30 {
+  --from-62-to-30: 0%;
+}
+
+#cb62:not(:checked) ~ .game-field #s81 {
+  --from-62-to-81: 8vmin;
+}
+
+#cb62:checked ~ .game-field #s81 {
+  --from-62-to-81: 0%;
+}
+
+#cb62:not(:checked) ~ .game-field #s85 {
+  --from-62-to-85: 8vmin;
+}
+
+#cb62:checked ~ .game-field #s85 {
+  --from-62-to-85: 0%;
+}
+
+#cb62:not(:checked) ~ .game-field #s38 {
+  --from-62-to-38: 8vmin;
+}
+
+#cb62:checked ~ .game-field #s38 {
+  --from-62-to-38: 0%;
+}
+
+#cb63:not(:checked) ~ .game-field #s63 {
+  --from-63-to-63: 8vmin;
+}
+
+#cb63:checked ~ .game-field #s63 {
+  --from-63-to-63: 0%;
+}
+
+#cb63:not(:checked) ~ .game-field #s99 {
+  --from-63-to-99: 8vmin;
+}
+
+#cb63:checked ~ .game-field #s99 {
+  --from-63-to-99: 0%;
+}
+
+#cb63:not(:checked) ~ .game-field #s21 {
+  --from-63-to-21: 8vmin;
+}
+
+#cb63:checked ~ .game-field #s21 {
+  --from-63-to-21: 0%;
+}
+
+#cb63:not(:checked) ~ .game-field #s67 {
+  --from-63-to-67: 8vmin;
+}
+
+#cb63:checked ~ .game-field #s67 {
+  --from-63-to-67: 0%;
+}
+
+#cb63:not(:checked) ~ .game-field #s17 {
+  --from-63-to-17: 8vmin;
+}
+
+#cb63:checked ~ .game-field #s17 {
+  --from-63-to-17: 0%;
+}
+
+#cb64:not(:checked) ~ .game-field #s64 {
+  --from-64-to-64: 8vmin;
+}
+
+#cb64:checked ~ .game-field #s64 {
+  --from-64-to-64: 0%;
+}
+
+#cb64:not(:checked) ~ .game-field #s17 {
+  --from-64-to-17: 8vmin;
+}
+
+#cb64:checked ~ .game-field #s17 {
+  --from-64-to-17: 0%;
+}
+
+#cb64:not(:checked) ~ .game-field #s8 {
+  --from-64-to-8: 8vmin;
+}
+
+#cb64:checked ~ .game-field #s8 {
+  --from-64-to-8: 0%;
+}
+
+#cb64:not(:checked) ~ .game-field #s28 {
+  --from-64-to-28: 8vmin;
+}
+
+#cb64:checked ~ .game-field #s28 {
+  --from-64-to-28: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s65 {
+  --from-65-to-65: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s65 {
+  --from-65-to-65: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s9 {
+  --from-65-to-9: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s9 {
+  --from-65-to-9: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s90 {
+  --from-65-to-90: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s90 {
+  --from-65-to-90: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s24 {
+  --from-65-to-24: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s24 {
+  --from-65-to-24: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s25 {
+  --from-65-to-25: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s25 {
+  --from-65-to-25: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s19 {
+  --from-65-to-19: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s19 {
+  --from-65-to-19: 0%;
+}
+
+#cb65:not(:checked) ~ .game-field #s84 {
+  --from-65-to-84: 8vmin;
+}
+
+#cb65:checked ~ .game-field #s84 {
+  --from-65-to-84: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s66 {
+  --from-66-to-66: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s66 {
+  --from-66-to-66: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s5 {
+  --from-66-to-5: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s5 {
+  --from-66-to-5: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s16 {
+  --from-66-to-16: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s16 {
+  --from-66-to-16: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s84 {
+  --from-66-to-84: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s84 {
+  --from-66-to-84: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s97 {
+  --from-66-to-97: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s97 {
+  --from-66-to-97: 0%;
+}
+
+#cb66:not(:checked) ~ .game-field #s20 {
+  --from-66-to-20: 8vmin;
+}
+
+#cb66:checked ~ .game-field #s20 {
+  --from-66-to-20: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s67 {
+  --from-67-to-67: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s67 {
+  --from-67-to-67: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s49 {
+  --from-67-to-49: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s49 {
+  --from-67-to-49: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s96 {
+  --from-67-to-96: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s96 {
+  --from-67-to-96: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s92 {
+  --from-67-to-92: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s92 {
+  --from-67-to-92: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s20 {
+  --from-67-to-20: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s20 {
+  --from-67-to-20: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s70 {
+  --from-67-to-70: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s70 {
+  --from-67-to-70: 0%;
+}
+
+#cb67:not(:checked) ~ .game-field #s38 {
+  --from-67-to-38: 8vmin;
+}
+
+#cb67:checked ~ .game-field #s38 {
+  --from-67-to-38: 0%;
+}
+
+#cb68:not(:checked) ~ .game-field #s68 {
+  --from-68-to-68: 8vmin;
+}
+
+#cb68:checked ~ .game-field #s68 {
+  --from-68-to-68: 0%;
+}
+
+#cb68:not(:checked) ~ .game-field #s57 {
+  --from-68-to-57: 8vmin;
+}
+
+#cb68:checked ~ .game-field #s57 {
+  --from-68-to-57: 0%;
+}
+
+#cb68:not(:checked) ~ .game-field #s43 {
+  --from-68-to-43: 8vmin;
+}
+
+#cb68:checked ~ .game-field #s43 {
+  --from-68-to-43: 0%;
+}
+
+#cb69:not(:checked) ~ .game-field #s69 {
+  --from-69-to-69: 8vmin;
+}
+
+#cb69:checked ~ .game-field #s69 {
+  --from-69-to-69: 0%;
+}
+
+#cb69:not(:checked) ~ .game-field #s33 {
+  --from-69-to-33: 8vmin;
+}
+
+#cb69:checked ~ .game-field #s33 {
+  --from-69-to-33: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s70 {
+  --from-70-to-70: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s70 {
+  --from-70-to-70: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s37 {
+  --from-70-to-37: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s37 {
+  --from-70-to-37: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s75 {
+  --from-70-to-75: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s75 {
+  --from-70-to-75: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s26 {
+  --from-70-to-26: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s26 {
+  --from-70-to-26: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s57 {
+  --from-70-to-57: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s57 {
+  --from-70-to-57: 0%;
+}
+
+#cb70:not(:checked) ~ .game-field #s92 {
+  --from-70-to-92: 8vmin;
+}
+
+#cb70:checked ~ .game-field #s92 {
+  --from-70-to-92: 0%;
+}
+
+#cb71:not(:checked) ~ .game-field #s71 {
+  --from-71-to-71: 8vmin;
+}
+
+#cb71:checked ~ .game-field #s71 {
+  --from-71-to-71: 0%;
+}
+
+#cb71:not(:checked) ~ .game-field #s49 {
+  --from-71-to-49: 8vmin;
+}
+
+#cb71:checked ~ .game-field #s49 {
+  --from-71-to-49: 0%;
+}
+
+#cb71:not(:checked) ~ .game-field #s64 {
+  --from-71-to-64: 8vmin;
+}
+
+#cb71:checked ~ .game-field #s64 {
+  --from-71-to-64: 0%;
+}
+
+#cb72:not(:checked) ~ .game-field #s72 {
+  --from-72-to-72: 8vmin;
+}
+
+#cb72:checked ~ .game-field #s72 {
+  --from-72-to-72: 0%;
+}
+
+#cb72:not(:checked) ~ .game-field #s28 {
+  --from-72-to-28: 8vmin;
+}
+
+#cb72:checked ~ .game-field #s28 {
+  --from-72-to-28: 0%;
+}
+
+#cb72:not(:checked) ~ .game-field #s34 {
+  --from-72-to-34: 8vmin;
+}
+
+#cb72:checked ~ .game-field #s34 {
+  --from-72-to-34: 0%;
+}
+
+#cb72:not(:checked) ~ .game-field #s74 {
+  --from-72-to-74: 8vmin;
+}
+
+#cb72:checked ~ .game-field #s74 {
+  --from-72-to-74: 0%;
+}
+
+#cb72:not(:checked) ~ .game-field #s32 {
+  --from-72-to-32: 8vmin;
+}
+
+#cb72:checked ~ .game-field #s32 {
+  --from-72-to-32: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s73 {
+  --from-73-to-73: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s73 {
+  --from-73-to-73: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s64 {
+  --from-73-to-64: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s64 {
+  --from-73-to-64: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s97 {
+  --from-73-to-97: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s97 {
+  --from-73-to-97: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s47 {
+  --from-73-to-47: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s47 {
+  --from-73-to-47: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s18 {
+  --from-73-to-18: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s18 {
+  --from-73-to-18: 0%;
+}
+
+#cb73:not(:checked) ~ .game-field #s59 {
+  --from-73-to-59: 8vmin;
+}
+
+#cb73:checked ~ .game-field #s59 {
+  --from-73-to-59: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s74 {
+  --from-74-to-74: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s74 {
+  --from-74-to-74: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s13 {
+  --from-74-to-13: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s13 {
+  --from-74-to-13: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s99 {
+  --from-74-to-99: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s99 {
+  --from-74-to-99: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s58 {
+  --from-74-to-58: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s58 {
+  --from-74-to-58: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s6 {
+  --from-74-to-6: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s6 {
+  --from-74-to-6: 0%;
+}
+
+#cb74:not(:checked) ~ .game-field #s80 {
+  --from-74-to-80: 8vmin;
+}
+
+#cb74:checked ~ .game-field #s80 {
+  --from-74-to-80: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s75 {
+  --from-75-to-75: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s75 {
+  --from-75-to-75: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s55 {
+  --from-75-to-55: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s55 {
+  --from-75-to-55: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s21 {
+  --from-75-to-21: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s21 {
+  --from-75-to-21: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s88 {
+  --from-75-to-88: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s88 {
+  --from-75-to-88: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s47 {
+  --from-75-to-47: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s47 {
+  --from-75-to-47: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s31 {
+  --from-75-to-31: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s31 {
+  --from-75-to-31: 0%;
+}
+
+#cb75:not(:checked) ~ .game-field #s81 {
+  --from-75-to-81: 8vmin;
+}
+
+#cb75:checked ~ .game-field #s81 {
+  --from-75-to-81: 0%;
+}
+
+#cb76:not(:checked) ~ .game-field #s76 {
+  --from-76-to-76: 8vmin;
+}
+
+#cb76:checked ~ .game-field #s76 {
+  --from-76-to-76: 0%;
+}
+
+#cb76:not(:checked) ~ .game-field #s10 {
+  --from-76-to-10: 8vmin;
+}
+
+#cb76:checked ~ .game-field #s10 {
+  --from-76-to-10: 0%;
+}
+
+#cb76:not(:checked) ~ .game-field #s86 {
+  --from-76-to-86: 8vmin;
+}
+
+#cb76:checked ~ .game-field #s86 {
+  --from-76-to-86: 0%;
+}
+
+#cb76:not(:checked) ~ .game-field #s95 {
+  --from-76-to-95: 8vmin;
+}
+
+#cb76:checked ~ .game-field #s95 {
+  --from-76-to-95: 0%;
+}
+
+#cb76:not(:checked) ~ .game-field #s50 {
+  --from-76-to-50: 8vmin;
+}
+
+#cb76:checked ~ .game-field #s50 {
+  --from-76-to-50: 0%;
+}
+
+#cb77:not(:checked) ~ .game-field #s77 {
+  --from-77-to-77: 8vmin;
+}
+
+#cb77:checked ~ .game-field #s77 {
+  --from-77-to-77: 0%;
+}
+
+#cb77:not(:checked) ~ .game-field #s21 {
+  --from-77-to-21: 8vmin;
+}
+
+#cb77:checked ~ .game-field #s21 {
+  --from-77-to-21: 0%;
+}
+
+#cb77:not(:checked) ~ .game-field #s40 {
+  --from-77-to-40: 8vmin;
+}
+
+#cb77:checked ~ .game-field #s40 {
+  --from-77-to-40: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s78 {
+  --from-78-to-78: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s78 {
+  --from-78-to-78: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s59 {
+  --from-78-to-59: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s59 {
+  --from-78-to-59: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s23 {
+  --from-78-to-23: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s23 {
+  --from-78-to-23: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s80 {
+  --from-78-to-80: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s80 {
+  --from-78-to-80: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s2 {
+  --from-78-to-2: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s2 {
+  --from-78-to-2: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s5 {
+  --from-78-to-5: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s5 {
+  --from-78-to-5: 0%;
+}
+
+#cb78:not(:checked) ~ .game-field #s86 {
+  --from-78-to-86: 8vmin;
+}
+
+#cb78:checked ~ .game-field #s86 {
+  --from-78-to-86: 0%;
+}
+
+#cb79:not(:checked) ~ .game-field #s79 {
+  --from-79-to-79: 8vmin;
+}
+
+#cb79:checked ~ .game-field #s79 {
+  --from-79-to-79: 0%;
+}
+
+#cb79:not(:checked) ~ .game-field #s21 {
+  --from-79-to-21: 8vmin;
+}
+
+#cb79:checked ~ .game-field #s21 {
+  --from-79-to-21: 0%;
+}
+
+#cb79:not(:checked) ~ .game-field #s33 {
+  --from-79-to-33: 8vmin;
+}
+
+#cb79:checked ~ .game-field #s33 {
+  --from-79-to-33: 0%;
+}
+
+#cb80:not(:checked) ~ .game-field #s80 {
+  --from-80-to-80: 8vmin;
+}
+
+#cb80:checked ~ .game-field #s80 {
+  --from-80-to-80: 0%;
+}
+
+#cb80:not(:checked) ~ .game-field #s68 {
+  --from-80-to-68: 8vmin;
+}
+
+#cb80:checked ~ .game-field #s68 {
+  --from-80-to-68: 0%;
+}
+
+#cb80:not(:checked) ~ .game-field #s93 {
+  --from-80-to-93: 8vmin;
+}
+
+#cb80:checked ~ .game-field #s93 {
+  --from-80-to-93: 0%;
+}
+
+#cb80:not(:checked) ~ .game-field #s40 {
+  --from-80-to-40: 8vmin;
+}
+
+#cb80:checked ~ .game-field #s40 {
+  --from-80-to-40: 0%;
+}
+
+#cb80:not(:checked) ~ .game-field #s20 {
+  --from-80-to-20: 8vmin;
+}
+
+#cb80:checked ~ .game-field #s20 {
+  --from-80-to-20: 0%;
+}
+
+#cb81:not(:checked) ~ .game-field #s81 {
+  --from-81-to-81: 8vmin;
+}
+
+#cb81:checked ~ .game-field #s81 {
+  --from-81-to-81: 0%;
+}
+
+#cb81:not(:checked) ~ .game-field #s86 {
+  --from-81-to-86: 8vmin;
+}
+
+#cb81:checked ~ .game-field #s86 {
+  --from-81-to-86: 0%;
+}
+
+#cb81:not(:checked) ~ .game-field #s36 {
+  --from-81-to-36: 8vmin;
+}
+
+#cb81:checked ~ .game-field #s36 {
+  --from-81-to-36: 0%;
+}
+
+#cb82:not(:checked) ~ .game-field #s82 {
+  --from-82-to-82: 8vmin;
+}
+
+#cb82:checked ~ .game-field #s82 {
+  --from-82-to-82: 0%;
+}
+
+#cb82:not(:checked) ~ .game-field #s100 {
+  --from-82-to-100: 8vmin;
+}
+
+#cb82:checked ~ .game-field #s100 {
+  --from-82-to-100: 0%;
+}
+
+#cb82:not(:checked) ~ .game-field #s12 {
+  --from-82-to-12: 8vmin;
+}
+
+#cb82:checked ~ .game-field #s12 {
+  --from-82-to-12: 0%;
+}
+
+#cb83:not(:checked) ~ .game-field #s83 {
+  --from-83-to-83: 8vmin;
+}
+
+#cb83:checked ~ .game-field #s83 {
+  --from-83-to-83: 0%;
+}
+
+#cb83:not(:checked) ~ .game-field #s33 {
+  --from-83-to-33: 8vmin;
+}
+
+#cb83:checked ~ .game-field #s33 {
+  --from-83-to-33: 0%;
+}
+
+#cb83:not(:checked) ~ .game-field #s18 {
+  --from-83-to-18: 8vmin;
+}
+
+#cb83:checked ~ .game-field #s18 {
+  --from-83-to-18: 0%;
+}
+
+#cb83:not(:checked) ~ .game-field #s9 {
+  --from-83-to-9: 8vmin;
+}
+
+#cb83:checked ~ .game-field #s9 {
+  --from-83-to-9: 0%;
+}
+
+#cb83:not(:checked) ~ .game-field #s22 {
+  --from-83-to-22: 8vmin;
+}
+
+#cb83:checked ~ .game-field #s22 {
+  --from-83-to-22: 0%;
+}
+
+#cb84:not(:checked) ~ .game-field #s84 {
+  --from-84-to-84: 8vmin;
+}
+
+#cb84:checked ~ .game-field #s84 {
+  --from-84-to-84: 0%;
+}
+
+#cb84:not(:checked) ~ .game-field #s18 {
+  --from-84-to-18: 8vmin;
+}
+
+#cb84:checked ~ .game-field #s18 {
+  --from-84-to-18: 0%;
+}
+
+#cb84:not(:checked) ~ .game-field #s43 {
+  --from-84-to-43: 8vmin;
+}
+
+#cb84:checked ~ .game-field #s43 {
+  --from-84-to-43: 0%;
+}
+
+#cb84:not(:checked) ~ .game-field #s48 {
+  --from-84-to-48: 8vmin;
+}
+
+#cb84:checked ~ .game-field #s48 {
+  --from-84-to-48: 0%;
+}
+
+#cb85:not(:checked) ~ .game-field #s85 {
+  --from-85-to-85: 8vmin;
+}
+
+#cb85:checked ~ .game-field #s85 {
+  --from-85-to-85: 0%;
+}
+
+#cb85:not(:checked) ~ .game-field #s87 {
+  --from-85-to-87: 8vmin;
+}
+
+#cb85:checked ~ .game-field #s87 {
+  --from-85-to-87: 0%;
+}
+
+#cb86:not(:checked) ~ .game-field #s86 {
+  --from-86-to-86: 8vmin;
+}
+
+#cb86:checked ~ .game-field #s86 {
+  --from-86-to-86: 0%;
+}
+
+#cb86:not(:checked) ~ .game-field #s51 {
+  --from-86-to-51: 8vmin;
+}
+
+#cb86:checked ~ .game-field #s51 {
+  --from-86-to-51: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s87 {
+  --from-87-to-87: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s87 {
+  --from-87-to-87: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s10 {
+  --from-87-to-10: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s10 {
+  --from-87-to-10: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s39 {
+  --from-87-to-39: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s39 {
+  --from-87-to-39: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s35 {
+  --from-87-to-35: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s35 {
+  --from-87-to-35: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s60 {
+  --from-87-to-60: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s60 {
+  --from-87-to-60: 0%;
+}
+
+#cb87:not(:checked) ~ .game-field #s63 {
+  --from-87-to-63: 8vmin;
+}
+
+#cb87:checked ~ .game-field #s63 {
+  --from-87-to-63: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s88 {
+  --from-88-to-88: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s88 {
+  --from-88-to-88: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s18 {
+  --from-88-to-18: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s18 {
+  --from-88-to-18: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s30 {
+  --from-88-to-30: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s30 {
+  --from-88-to-30: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s77 {
+  --from-88-to-77: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s77 {
+  --from-88-to-77: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s45 {
+  --from-88-to-45: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s45 {
+  --from-88-to-45: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s55 {
+  --from-88-to-55: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s55 {
+  --from-88-to-55: 0%;
+}
+
+#cb88:not(:checked) ~ .game-field #s74 {
+  --from-88-to-74: 8vmin;
+}
+
+#cb88:checked ~ .game-field #s74 {
+  --from-88-to-74: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s89 {
+  --from-89-to-89: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s89 {
+  --from-89-to-89: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s45 {
+  --from-89-to-45: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s45 {
+  --from-89-to-45: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s54 {
+  --from-89-to-54: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s54 {
+  --from-89-to-54: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s49 {
+  --from-89-to-49: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s49 {
+  --from-89-to-49: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s16 {
+  --from-89-to-16: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s16 {
+  --from-89-to-16: 0%;
+}
+
+#cb89:not(:checked) ~ .game-field #s52 {
+  --from-89-to-52: 8vmin;
+}
+
+#cb89:checked ~ .game-field #s52 {
+  --from-89-to-52: 0%;
+}
+
+#cb90:not(:checked) ~ .game-field #s90 {
+  --from-90-to-90: 8vmin;
+}
+
+#cb90:checked ~ .game-field #s90 {
+  --from-90-to-90: 0%;
+}
+
+#cb90:not(:checked) ~ .game-field #s70 {
+  --from-90-to-70: 8vmin;
+}
+
+#cb90:checked ~ .game-field #s70 {
+  --from-90-to-70: 0%;
+}
+
+#cb90:not(:checked) ~ .game-field #s50 {
+  --from-90-to-50: 8vmin;
+}
+
+#cb90:checked ~ .game-field #s50 {
+  --from-90-to-50: 0%;
+}
+
+#cb90:not(:checked) ~ .game-field #s54 {
+  --from-90-to-54: 8vmin;
+}
+
+#cb90:checked ~ .game-field #s54 {
+  --from-90-to-54: 0%;
+}
+
+#cb90:not(:checked) ~ .game-field #s34 {
+  --from-90-to-34: 8vmin;
+}
+
+#cb90:checked ~ .game-field #s34 {
+  --from-90-to-34: 0%;
+}
+
+#cb91:not(:checked) ~ .game-field #s91 {
+  --from-91-to-91: 8vmin;
+}
+
+#cb91:checked ~ .game-field #s91 {
+  --from-91-to-91: 0%;
+}
+
+#cb91:not(:checked) ~ .game-field #s83 {
+  --from-91-to-83: 8vmin;
+}
+
+#cb91:checked ~ .game-field #s83 {
+  --from-91-to-83: 0%;
+}
+
+#cb91:not(:checked) ~ .game-field #s31 {
+  --from-91-to-31: 8vmin;
+}
+
+#cb91:checked ~ .game-field #s31 {
+  --from-91-to-31: 0%;
+}
+
+#cb92:not(:checked) ~ .game-field #s92 {
+  --from-92-to-92: 8vmin;
+}
+
+#cb92:checked ~ .game-field #s92 {
+  --from-92-to-92: 0%;
+}
+
+#cb92:not(:checked) ~ .game-field #s37 {
+  --from-92-to-37: 8vmin;
+}
+
+#cb92:checked ~ .game-field #s37 {
+  --from-92-to-37: 0%;
+}
+
+#cb92:not(:checked) ~ .game-field #s28 {
+  --from-92-to-28: 8vmin;
+}
+
+#cb92:checked ~ .game-field #s28 {
+  --from-92-to-28: 0%;
+}
+
+#cb92:not(:checked) ~ .game-field #s71 {
+  --from-92-to-71: 8vmin;
+}
+
+#cb92:checked ~ .game-field #s71 {
+  --from-92-to-71: 0%;
+}
+
+#cb93:not(:checked) ~ .game-field #s93 {
+  --from-93-to-93: 8vmin;
+}
+
+#cb93:checked ~ .game-field #s93 {
+  --from-93-to-93: 0%;
+}
+
+#cb93:not(:checked) ~ .game-field #s77 {
+  --from-93-to-77: 8vmin;
+}
+
+#cb93:checked ~ .game-field #s77 {
+  --from-93-to-77: 0%;
+}
+
+#cb93:not(:checked) ~ .game-field #s59 {
+  --from-93-to-59: 8vmin;
+}
+
+#cb93:checked ~ .game-field #s59 {
+  --from-93-to-59: 0%;
+}
+
+#cb93:not(:checked) ~ .game-field #s86 {
+  --from-93-to-86: 8vmin;
+}
+
+#cb93:checked ~ .game-field #s86 {
+  --from-93-to-86: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s94 {
+  --from-94-to-94: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s94 {
+  --from-94-to-94: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s38 {
+  --from-94-to-38: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s38 {
+  --from-94-to-38: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s3 {
+  --from-94-to-3: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s3 {
+  --from-94-to-3: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s40 {
+  --from-94-to-40: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s40 {
+  --from-94-to-40: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s68 {
+  --from-94-to-68: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s68 {
+  --from-94-to-68: 0%;
+}
+
+#cb94:not(:checked) ~ .game-field #s45 {
+  --from-94-to-45: 8vmin;
+}
+
+#cb94:checked ~ .game-field #s45 {
+  --from-94-to-45: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s95 {
+  --from-95-to-95: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s95 {
+  --from-95-to-95: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s82 {
+  --from-95-to-82: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s82 {
+  --from-95-to-82: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s30 {
+  --from-95-to-30: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s30 {
+  --from-95-to-30: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s36 {
+  --from-95-to-36: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s36 {
+  --from-95-to-36: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s17 {
+  --from-95-to-17: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s17 {
+  --from-95-to-17: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s29 {
+  --from-95-to-29: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s29 {
+  --from-95-to-29: 0%;
+}
+
+#cb95:not(:checked) ~ .game-field #s64 {
+  --from-95-to-64: 8vmin;
+}
+
+#cb95:checked ~ .game-field #s64 {
+  --from-95-to-64: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s96 {
+  --from-96-to-96: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s96 {
+  --from-96-to-96: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s73 {
+  --from-96-to-73: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s73 {
+  --from-96-to-73: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s58 {
+  --from-96-to-58: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s58 {
+  --from-96-to-58: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s18 {
+  --from-96-to-18: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s18 {
+  --from-96-to-18: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s99 {
+  --from-96-to-99: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s99 {
+  --from-96-to-99: 0%;
+}
+
+#cb96:not(:checked) ~ .game-field #s42 {
+  --from-96-to-42: 8vmin;
+}
+
+#cb96:checked ~ .game-field #s42 {
+  --from-96-to-42: 0%;
+}
+
+#cb97:not(:checked) ~ .game-field #s97 {
+  --from-97-to-97: 8vmin;
+}
+
+#cb97:checked ~ .game-field #s97 {
+  --from-97-to-97: 0%;
+}
+
+#cb97:not(:checked) ~ .game-field #s60 {
+  --from-97-to-60: 8vmin;
+}
+
+#cb97:checked ~ .game-field #s60 {
+  --from-97-to-60: 0%;
+}
+
+#cb97:not(:checked) ~ .game-field #s54 {
+  --from-97-to-54: 8vmin;
+}
+
+#cb97:checked ~ .game-field #s54 {
+  --from-97-to-54: 0%;
+}
+
+#cb97:not(:checked) ~ .game-field #s89 {
+  --from-97-to-89: 8vmin;
+}
+
+#cb97:checked ~ .game-field #s89 {
+  --from-97-to-89: 0%;
+}
+
+#cb97:not(:checked) ~ .game-field #s49 {
+  --from-97-to-49: 8vmin;
+}
+
+#cb97:checked ~ .game-field #s49 {
+  --from-97-to-49: 0%;
+}
+
+#cb98:not(:checked) ~ .game-field #s98 {
+  --from-98-to-98: 8vmin;
+}
+
+#cb98:checked ~ .game-field #s98 {
+  --from-98-to-98: 0%;
+}
+
+#cb98:not(:checked) ~ .game-field #s38 {
+  --from-98-to-38: 8vmin;
+}
+
+#cb98:checked ~ .game-field #s38 {
+  --from-98-to-38: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s99 {
+  --from-99-to-99: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s99 {
+  --from-99-to-99: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s74 {
+  --from-99-to-74: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s74 {
+  --from-99-to-74: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s73 {
+  --from-99-to-73: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s73 {
+  --from-99-to-73: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s53 {
+  --from-99-to-53: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s53 {
+  --from-99-to-53: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s36 {
+  --from-99-to-36: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s36 {
+  --from-99-to-36: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s94 {
+  --from-99-to-94: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s94 {
+  --from-99-to-94: 0%;
+}
+
+#cb99:not(:checked) ~ .game-field #s92 {
+  --from-99-to-92: 8vmin;
+}
+
+#cb99:checked ~ .game-field #s92 {
+  --from-99-to-92: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s100 {
+  --from-100-to-100: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s100 {
+  --from-100-to-100: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s61 {
+  --from-100-to-61: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s61 {
+  --from-100-to-61: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s71 {
+  --from-100-to-71: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s71 {
+  --from-100-to-71: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s57 {
+  --from-100-to-57: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s57 {
+  --from-100-to-57: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s96 {
+  --from-100-to-96: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s96 {
+  --from-100-to-96: 0%;
+}
+
+#cb100:not(:checked) ~ .game-field #s24 {
+  --from-100-to-24: 8vmin;
+}
+
+#cb100:checked ~ .game-field #s24 {
+  --from-100-to-24: 0%;
+}
+
+#s1 {
+  background-position-y: calc( 8vmin + var(--from-1-to-1) );
+}
+
+#s2 {
+  background-position-y: calc( 8vmin + var(--from-2-to-2) + var(--from-10-to-2) + var(--from-78-to-2) );
+}
+
+#s3 {
+  background-position-y: calc( 8vmin + var(--from-3-to-3) + var(--from-50-to-3) + var(--from-94-to-3) );
+}
+
+#s4 {
+  background-position-y: calc( 8vmin + var(--from-4-to-4) + var(--from-30-to-4) + var(--from-60-to-4) );
+}
+
+#s5 {
+  background-position-y: calc( 8vmin + var(--from-5-to-5) + var(--from-22-to-5) + var(--from-23-to-5) + var(--from-24-to-5) + var(--from-40-to-5) + var(--from-42-to-5) + var(--from-66-to-5) + var(--from-78-to-5) );
+}
+
+#s6 {
+  background-position-y: calc( 8vmin + var(--from-6-to-6) + var(--from-55-to-6) + var(--from-74-to-6) );
+}
+
+#s7 {
+  background-position-y: calc( 8vmin + var(--from-7-to-7) + var(--from-38-to-7) + var(--from-47-to-7) );
+}
+
+#s8 {
+  background-position-y: calc( 8vmin + var(--from-8-to-8) + var(--from-20-to-8) + var(--from-25-to-8) + var(--from-29-to-8) + var(--from-50-to-8) + var(--from-64-to-8) );
+}
+
+#s9 {
+  background-position-y: calc( 8vmin + var(--from-9-to-9) + var(--from-42-to-9) + var(--from-65-to-9) + var(--from-83-to-9) );
+}
+
+#s10 {
+  background-position-y: calc( 8vmin + var(--from-10-to-10) + var(--from-19-to-10) + var(--from-46-to-10) + var(--from-76-to-10) + var(--from-87-to-10) );
+}
+
+#s11 {
+  background-position-y: calc( 8vmin + var(--from-11-to-11) + var(--from-1-to-11) + var(--from-25-to-11) );
+}
+
+#s12 {
+  background-position-y: calc( 8vmin + var(--from-12-to-12) + var(--from-82-to-12) );
+}
+
+#s13 {
+  background-position-y: calc( 8vmin + var(--from-13-to-13) + var(--from-74-to-13) );
+}
+
+#s14 {
+  background-position-y: calc( 8vmin + var(--from-14-to-14) + var(--from-57-to-14) );
+}
+
+#s15 {
+  background-position-y: calc( 8vmin + var(--from-15-to-15) + var(--from-13-to-15) + var(--from-21-to-15) + var(--from-39-to-15) + var(--from-52-to-15) );
+}
+
+#s16 {
+  background-position-y: calc( 8vmin + var(--from-16-to-16) + var(--from-3-to-16) + var(--from-18-to-16) + var(--from-66-to-16) + var(--from-89-to-16) );
+}
+
+#s17 {
+  background-position-y: calc( 8vmin + var(--from-17-to-17) + var(--from-12-to-17) + var(--from-19-to-17) + var(--from-31-to-17) + var(--from-63-to-17) + var(--from-64-to-17) + var(--from-95-to-17) );
+}
+
+#s18 {
+  background-position-y: calc( 8vmin + var(--from-18-to-18) + var(--from-15-to-18) + var(--from-25-to-18) + var(--from-73-to-18) + var(--from-83-to-18) + var(--from-84-to-18) + var(--from-88-to-18) + var(--from-96-to-18) );
+}
+
+#s19 {
+  background-position-y: calc( 8vmin + var(--from-19-to-19) + var(--from-9-to-19) + var(--from-65-to-19) );
+}
+
+#s20 {
+  background-position-y: calc( 8vmin + var(--from-20-to-20) + var(--from-21-to-20) + var(--from-39-to-20) + var(--from-66-to-20) + var(--from-67-to-20) + var(--from-80-to-20) );
+}
+
+#s21 {
+  background-position-y: calc( 8vmin + var(--from-21-to-21) + var(--from-8-to-21) + var(--from-11-to-21) + var(--from-25-to-21) + var(--from-63-to-21) + var(--from-75-to-21) + var(--from-77-to-21) + var(--from-79-to-21) );
+}
+
+#s22 {
+  background-position-y: calc( 8vmin + var(--from-22-to-22) + var(--from-7-to-22) + var(--from-17-to-22) + var(--from-26-to-22) + var(--from-28-to-22) + var(--from-31-to-22) + var(--from-39-to-22) + var(--from-53-to-22) + var(--from-59-to-22) + var(--from-83-to-22) );
+}
+
+#s23 {
+  background-position-y: calc( 8vmin + var(--from-23-to-23) + var(--from-20-to-23) + var(--from-24-to-23) + var(--from-78-to-23) );
+}
+
+#s24 {
+  background-position-y: calc( 8vmin + var(--from-24-to-24) + var(--from-33-to-24) + var(--from-36-to-24) + var(--from-65-to-24) + var(--from-100-to-24) );
+}
+
+#s25 {
+  background-position-y: calc( 8vmin + var(--from-25-to-25) + var(--from-2-to-25) + var(--from-23-to-25) + var(--from-24-to-25) + var(--from-48-to-25) + var(--from-65-to-25) );
+}
+
+#s26 {
+  background-position-y: calc( 8vmin + var(--from-26-to-26) + var(--from-59-to-26) + var(--from-70-to-26) );
+}
+
+#s27 {
+  background-position-y: calc( 8vmin + var(--from-27-to-27) + var(--from-60-to-27) );
+}
+
+#s28 {
+  background-position-y: calc( 8vmin + var(--from-28-to-28) + var(--from-12-to-28) + var(--from-43-to-28) + var(--from-59-to-28) + var(--from-64-to-28) + var(--from-72-to-28) + var(--from-92-to-28) );
+}
+
+#s29 {
+  background-position-y: calc( 8vmin + var(--from-29-to-29) + var(--from-33-to-29) + var(--from-95-to-29) );
+}
+
+#s30 {
+  background-position-y: calc( 8vmin + var(--from-30-to-30) + var(--from-17-to-30) + var(--from-40-to-30) + var(--from-44-to-30) + var(--from-62-to-30) + var(--from-88-to-30) + var(--from-95-to-30) );
+}
+
+#s31 {
+  background-position-y: calc( 8vmin + var(--from-31-to-31) + var(--from-5-to-31) + var(--from-16-to-31) + var(--from-34-to-31) + var(--from-59-to-31) + var(--from-75-to-31) + var(--from-91-to-31) );
+}
+
+#s32 {
+  background-position-y: calc( 8vmin + var(--from-32-to-32) + var(--from-10-to-32) + var(--from-55-to-32) + var(--from-72-to-32) );
+}
+
+#s33 {
+  background-position-y: calc( 8vmin + var(--from-33-to-33) + var(--from-36-to-33) + var(--from-46-to-33) + var(--from-51-to-33) + var(--from-69-to-33) + var(--from-79-to-33) + var(--from-83-to-33) );
+}
+
+#s34 {
+  background-position-y: calc( 8vmin + var(--from-34-to-34) + var(--from-14-to-34) + var(--from-72-to-34) + var(--from-90-to-34) );
+}
+
+#s35 {
+  background-position-y: calc( 8vmin + var(--from-35-to-35) + var(--from-41-to-35) + var(--from-46-to-35) + var(--from-87-to-35) );
+}
+
+#s36 {
+  background-position-y: calc( 8vmin + var(--from-36-to-36) + var(--from-10-to-36) + var(--from-16-to-36) + var(--from-81-to-36) + var(--from-95-to-36) + var(--from-99-to-36) );
+}
+
+#s37 {
+  background-position-y: calc( 8vmin + var(--from-37-to-37) + var(--from-24-to-37) + var(--from-70-to-37) + var(--from-92-to-37) );
+}
+
+#s38 {
+  background-position-y: calc( 8vmin + var(--from-38-to-38) + var(--from-40-to-38) + var(--from-51-to-38) + var(--from-62-to-38) + var(--from-67-to-38) + var(--from-94-to-38) + var(--from-98-to-38) );
+}
+
+#s39 {
+  background-position-y: calc( 8vmin + var(--from-39-to-39) + var(--from-48-to-39) + var(--from-87-to-39) );
+}
+
+#s40 {
+  background-position-y: calc( 8vmin + var(--from-40-to-40) + var(--from-13-to-40) + var(--from-23-to-40) + var(--from-38-to-40) + var(--from-77-to-40) + var(--from-80-to-40) + var(--from-94-to-40) );
+}
+
+#s41 {
+  background-position-y: calc( 8vmin + var(--from-41-to-41) + var(--from-1-to-41) + var(--from-44-to-41) );
+}
+
+#s42 {
+  background-position-y: calc( 8vmin + var(--from-42-to-42) + var(--from-20-to-42) + var(--from-96-to-42) );
+}
+
+#s43 {
+  background-position-y: calc( 8vmin + var(--from-43-to-43) + var(--from-8-to-43) + var(--from-68-to-43) + var(--from-84-to-43) );
+}
+
+#s44 {
+  background-position-y: calc( 8vmin + var(--from-44-to-44) + var(--from-43-to-44) );
+}
+
+#s45 {
+  background-position-y: calc( 8vmin + var(--from-45-to-45) + var(--from-88-to-45) + var(--from-89-to-45) + var(--from-94-to-45) );
+}
+
+#s46 {
+  background-position-y: calc( 8vmin + var(--from-46-to-46) + var(--from-18-to-46) );
+}
+
+#s47 {
+  background-position-y: calc( 8vmin + var(--from-47-to-47) + var(--from-18-to-47) + var(--from-73-to-47) + var(--from-75-to-47) );
+}
+
+#s48 {
+  background-position-y: calc( 8vmin + var(--from-48-to-48) + var(--from-1-to-48) + var(--from-41-to-48) + var(--from-58-to-48) + var(--from-84-to-48) );
+}
+
+#s49 {
+  background-position-y: calc( 8vmin + var(--from-49-to-49) + var(--from-32-to-49) + var(--from-53-to-49) + var(--from-67-to-49) + var(--from-71-to-49) + var(--from-89-to-49) + var(--from-97-to-49) );
+}
+
+#s50 {
+  background-position-y: calc( 8vmin + var(--from-50-to-50) + var(--from-13-to-50) + var(--from-19-to-50) + var(--from-20-to-50) + var(--from-37-to-50) + var(--from-76-to-50) + var(--from-90-to-50) );
+}
+
+#s51 {
+  background-position-y: calc( 8vmin + var(--from-51-to-51) + var(--from-3-to-51) + var(--from-4-to-51) + var(--from-7-to-51) + var(--from-29-to-51) + var(--from-86-to-51) );
+}
+
+#s52 {
+  background-position-y: calc( 8vmin + var(--from-52-to-52) + var(--from-26-to-52) + var(--from-43-to-52) + var(--from-60-to-52) + var(--from-89-to-52) );
+}
+
+#s53 {
+  background-position-y: calc( 8vmin + var(--from-53-to-53) + var(--from-50-to-53) + var(--from-99-to-53) );
+}
+
+#s54 {
+  background-position-y: calc( 8vmin + var(--from-54-to-54) + var(--from-2-to-54) + var(--from-7-to-54) + var(--from-15-to-54) + var(--from-17-to-54) + var(--from-24-to-54) + var(--from-37-to-54) + var(--from-89-to-54) + var(--from-90-to-54) + var(--from-97-to-54) );
+}
+
+#s55 {
+  background-position-y: calc( 8vmin + var(--from-55-to-55) + var(--from-1-to-55) + var(--from-22-to-55) + var(--from-31-to-55) + var(--from-75-to-55) + var(--from-88-to-55) );
+}
+
+#s56 {
+  background-position-y: calc( 8vmin + var(--from-56-to-56) + var(--from-33-to-56) + var(--from-50-to-56) );
+}
+
+#s57 {
+  background-position-y: calc( 8vmin + var(--from-57-to-57) + var(--from-40-to-57) + var(--from-41-to-57) + var(--from-68-to-57) + var(--from-70-to-57) + var(--from-100-to-57) );
+}
+
+#s58 {
+  background-position-y: calc( 8vmin + var(--from-58-to-58) + var(--from-2-to-58) + var(--from-74-to-58) + var(--from-96-to-58) );
+}
+
+#s59 {
+  background-position-y: calc( 8vmin + var(--from-59-to-59) + var(--from-11-to-59) + var(--from-15-to-59) + var(--from-56-to-59) + var(--from-73-to-59) + var(--from-78-to-59) + var(--from-93-to-59) );
+}
+
+#s60 {
+  background-position-y: calc( 8vmin + var(--from-60-to-60) + var(--from-15-to-60) + var(--from-17-to-60) + var(--from-87-to-60) + var(--from-97-to-60) );
+}
+
+#s61 {
+  background-position-y: calc( 8vmin + var(--from-61-to-61) + var(--from-22-to-61) + var(--from-58-to-61) + var(--from-100-to-61) );
+}
+
+#s62 {
+  background-position-y: calc( 8vmin + var(--from-62-to-62) + var(--from-42-to-62) );
+}
+
+#s63 {
+  background-position-y: calc( 8vmin + var(--from-63-to-63) + var(--from-25-to-63) + var(--from-28-to-63) + var(--from-87-to-63) );
+}
+
+#s64 {
+  background-position-y: calc( 8vmin + var(--from-64-to-64) + var(--from-38-to-64) + var(--from-71-to-64) + var(--from-73-to-64) + var(--from-95-to-64) );
+}
+
+#s65 {
+  background-position-y: calc( 8vmin + var(--from-65-to-65) + var(--from-32-to-65) + var(--from-52-to-65) );
+}
+
+#s66 {
+  background-position-y: calc( 8vmin + var(--from-66-to-66) + var(--from-30-to-66) + var(--from-50-to-66) + var(--from-52-to-66) );
+}
+
+#s67 {
+  background-position-y: calc( 8vmin + var(--from-67-to-67) + var(--from-6-to-67) + var(--from-43-to-67) + var(--from-45-to-67) + var(--from-63-to-67) );
+}
+
+#s68 {
+  background-position-y: calc( 8vmin + var(--from-68-to-68) + var(--from-36-to-68) + var(--from-52-to-68) + var(--from-58-to-68) + var(--from-59-to-68) + var(--from-80-to-68) + var(--from-94-to-68) );
+}
+
+#s69 {
+  background-position-y: calc( 8vmin + var(--from-69-to-69) + var(--from-26-to-69) + var(--from-43-to-69) );
+}
+
+#s70 {
+  background-position-y: calc( 8vmin + var(--from-70-to-70) + var(--from-33-to-70) + var(--from-47-to-70) + var(--from-59-to-70) + var(--from-67-to-70) + var(--from-90-to-70) );
+}
+
+#s71 {
+  background-position-y: calc( 8vmin + var(--from-71-to-71) + var(--from-24-to-71) + var(--from-41-to-71) + var(--from-42-to-71) + var(--from-92-to-71) + var(--from-100-to-71) );
+}
+
+#s72 {
+  background-position-y: calc( 8vmin + var(--from-72-to-72) + var(--from-5-to-72) + var(--from-11-to-72) + var(--from-38-to-72) );
+}
+
+#s73 {
+  background-position-y: calc( 8vmin + var(--from-73-to-73) + var(--from-6-to-73) + var(--from-20-to-73) + var(--from-27-to-73) + var(--from-30-to-73) + var(--from-39-to-73) + var(--from-53-to-73) + var(--from-96-to-73) + var(--from-99-to-73) );
+}
+
+#s74 {
+  background-position-y: calc( 8vmin + var(--from-74-to-74) + var(--from-7-to-74) + var(--from-19-to-74) + var(--from-21-to-74) + var(--from-26-to-74) + var(--from-72-to-74) + var(--from-88-to-74) + var(--from-99-to-74) );
+}
+
+#s75 {
+  background-position-y: calc( 8vmin + var(--from-75-to-75) + var(--from-70-to-75) );
+}
+
+#s76 {
+  background-position-y: calc( 8vmin + var(--from-76-to-76) + var(--from-26-to-76) + var(--from-35-to-76) );
+}
+
+#s77 {
+  background-position-y: calc( 8vmin + var(--from-77-to-77) + var(--from-88-to-77) + var(--from-93-to-77) );
+}
+
+#s78 {
+  background-position-y: calc( 8vmin + var(--from-78-to-78) + var(--from-33-to-78) );
+}
+
+#s79 {
+  background-position-y: calc( 8vmin + var(--from-79-to-79) + var(--from-4-to-79) + var(--from-6-to-79) + var(--from-46-to-79) );
+}
+
+#s80 {
+  background-position-y: calc( 8vmin + var(--from-80-to-80) + var(--from-9-to-80) + var(--from-18-to-80) + var(--from-23-to-80) + var(--from-49-to-80) + var(--from-74-to-80) + var(--from-78-to-80) );
+}
+
+#s81 {
+  background-position-y: calc( 8vmin + var(--from-81-to-81) + var(--from-1-to-81) + var(--from-11-to-81) + var(--from-21-to-81) + var(--from-29-to-81) + var(--from-36-to-81) + var(--from-54-to-81) + var(--from-62-to-81) + var(--from-75-to-81) );
+}
+
+#s82 {
+  background-position-y: calc( 8vmin + var(--from-82-to-82) + var(--from-19-to-82) + var(--from-95-to-82) );
+}
+
+#s83 {
+  background-position-y: calc( 8vmin + var(--from-83-to-83) + var(--from-20-to-83) + var(--from-91-to-83) );
+}
+
+#s84 {
+  background-position-y: calc( 8vmin + var(--from-84-to-84) + var(--from-8-to-84) + var(--from-23-to-84) + var(--from-33-to-84) + var(--from-61-to-84) + var(--from-65-to-84) + var(--from-66-to-84) );
+}
+
+#s85 {
+  background-position-y: calc( 8vmin + var(--from-85-to-85) + var(--from-18-to-85) + var(--from-21-to-85) + var(--from-31-to-85) + var(--from-47-to-85) + var(--from-57-to-85) + var(--from-62-to-85) );
+}
+
+#s86 {
+  background-position-y: calc( 8vmin + var(--from-86-to-86) + var(--from-76-to-86) + var(--from-78-to-86) + var(--from-81-to-86) + var(--from-93-to-86) );
+}
+
+#s87 {
+  background-position-y: calc( 8vmin + var(--from-87-to-87) + var(--from-9-to-87) + var(--from-53-to-87) + var(--from-85-to-87) );
+}
+
+#s88 {
+  background-position-y: calc( 8vmin + var(--from-88-to-88) + var(--from-75-to-88) );
+}
+
+#s89 {
+  background-position-y: calc( 8vmin + var(--from-89-to-89) + var(--from-13-to-89) + var(--from-21-to-89) + var(--from-23-to-89) + var(--from-36-to-89) + var(--from-52-to-89) + var(--from-97-to-89) );
+}
+
+#s90 {
+  background-position-y: calc( 8vmin + var(--from-90-to-90) + var(--from-5-to-90) + var(--from-45-to-90) + var(--from-55-to-90) + var(--from-65-to-90) );
+}
+
+#s91 {
+  background-position-y: calc( 8vmin + var(--from-91-to-91) + var(--from-3-to-91) + var(--from-13-to-91) + var(--from-50-to-91) );
+}
+
+#s92 {
+  background-position-y: calc( 8vmin + var(--from-92-to-92) + var(--from-19-to-92) + var(--from-41-to-92) + var(--from-67-to-92) + var(--from-70-to-92) + var(--from-99-to-92) );
+}
+
+#s93 {
+  background-position-y: calc( 8vmin + var(--from-93-to-93) + var(--from-61-to-93) + var(--from-80-to-93) );
+}
+
+#s94 {
+  background-position-y: calc( 8vmin + var(--from-94-to-94) + var(--from-99-to-94) );
+}
+
+#s95 {
+  background-position-y: calc( 8vmin + var(--from-95-to-95) + var(--from-6-to-95) + var(--from-22-to-95) + var(--from-42-to-95) + var(--from-45-to-95) + var(--from-55-to-95) + var(--from-56-to-95) + var(--from-76-to-95) );
+}
+
+#s96 {
+  background-position-y: calc( 8vmin + var(--from-96-to-96) + var(--from-18-to-96) + var(--from-55-to-96) + var(--from-67-to-96) + var(--from-100-to-96) );
+}
+
+#s97 {
+  background-position-y: calc( 8vmin + var(--from-97-to-97) + var(--from-1-to-97) + var(--from-17-to-97) + var(--from-60-to-97) + var(--from-66-to-97) + var(--from-73-to-97) );
+}
+
+#s98 {
+  background-position-y: calc( 8vmin + var(--from-98-to-98) + var(--from-35-to-98) + var(--from-53-to-98) + var(--from-58-to-98) );
+}
+
+#s99 {
+  background-position-y: calc( 8vmin + var(--from-99-to-99) + var(--from-4-to-99) + var(--from-26-to-99) + var(--from-56-to-99) + var(--from-63-to-99) + var(--from-74-to-99) + var(--from-96-to-99) );
+}
+
+#s100 {
+  background-position-y: calc( 8vmin + var(--from-100-to-100) + var(--from-5-to-100) + var(--from-12-to-100) + var(--from-49-to-100) + var(--from-82-to-100) );
+}
+
+.cell {
+  max-height: 8vmin;
+  max-width: 8vmin;
+  overflow: hidden;
+}
+.cell-bg {
+  display: block;
+  position: relative;
+  height: 7.2vmin;
+  width: 7.2vmin;
+  background: repeating-linear-gradient(#9E2730 0, #9E2730 8vmin, #2F8621 8vmin, #2F8621 16vmin);
+  background-size: 8vmin 800vmin;
+  background-position-x: 0;
+}
