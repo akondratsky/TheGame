@@ -4,24 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "new": "gulp new",
-    "new:easy": "gulp new --size=3 --cohesion=2 --steps=3",
-    "new:normal": "gulp new --size=5 --cohesion=4 --steps=10",
-    "new:hard": "gulp new --size=7 --cohesion=5 --steps=15",
-    "new:nightmare": "gulp new --size=10 --cohesion=8 --steps=42"
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "del": "3.0.0",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-inject-string": "1.1.1",
     "gulp-remove-content": "1.0.1",
-    "gulp-sass": "4.0.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
     "gulp-sourcemaps": "2.6.4",
     "merge-stream": "1.0.1",
-    "yargs": "13.3.0"
+    "sass": "1.63.0"
   }
 }

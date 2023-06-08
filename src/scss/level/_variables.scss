@@ -1,4 +1,6 @@
-$cell-width: 80vmin / $field-size !default;
+@use "sass:math";
+
+$cell-width: math.div(80vmin, $field-size) !default;
 
 $cells-links: ((2)         // --from-1-to-2
                 (3)        // --from-2-to-3
@@ -10,19 +12,8 @@ $cells-links: ((2)         // --from-1-to-2
                 (1, 6)
                 (6, 8)) !default;
 
-$border-width: $cell-width / 20;
+$border-width: math.div($cell-width, 20);
 $border-style: solid;
 $border-color: #000;
 
-$color-primary: #9E2730;
-$color-secondary: #2F8621;
-
 $number-of-cells: $field-size * $field-size;
-
-// .cell-1 {
-//     transform: translate(var( --ca1-1 )) translate(var( --ca1-2 )) translate(var( --ca1-3 )) ...
-//     --ca-1: $cell-cize;
-//   &:checked {
-//     --ca-1:0;
-//   }
-// }

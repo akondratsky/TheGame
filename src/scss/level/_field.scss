@@ -1,0 +1,7 @@
+.game-field {
+  display: flex;
+  width: $field-size * $cell-width + $border-width * 2;
+  flex-wrap: wrap;
+
+  @extend %border;
+}

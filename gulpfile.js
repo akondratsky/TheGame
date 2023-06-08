@@ -1,65 +1,101 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
-const inject = require('gulp-inject-string');
-const remove = require('gulp-remove-content');
-const merge = require('merge-stream');
-const argv = require('yargs').argv;
+const { createGenerateLevelTask } = require('./utils/createGenerateLevelTask');
+const { createCssTask } = require('./utils/createCssTask');
+const { createGenerateIndexTask } = require('./utils/createGenerateIndexTask');
+const { cleanTask } = require('./utils/cleanTask');
+const { createIndexCssTask } = require('./utils/createIndexCssTask');
 
-const { generateStringsToInject, generateLevelMap } = require('./utils');
+/**
+ * @type {import('./utils/createGenerateLevelTask').Level[]}
+ */
+const levels = [
+  // easy
+  {
+    levelName: '1 (easy)',
+    size: 3,
+    cohesion: 2,
+    steps: 3,
+  },
+  {
+    levelName: '2 (easy)',
+    size: 3,
+    cohesion: 2,
+    steps: 5,
+  },
+  {
+    levelName: '3 (easy)',
+    size: 3,
+    cohesion: 3,
+    steps: 5,
+  },
+  {
+    levelName: '4 (normal)',
+    size: 5,
+    cohesion: 4,
+    steps: 7,
+  },
+  {
+    levelName: '5 (normal)',
+    size: 5,
+    cohesion: 4,
+    steps: 9,
+  },
+  {
+    levelName: '6 (normal)',
+    size: 5,
+    cohesion: 5,
+    steps: 11,
+  },
+  {
+    levelName: '7 (hard)',
+    size: 7,
+    cohesion: 5,
+    steps: 15,
+  },
+  {
+    levelName: '8 (hard)',
+    size: 7,
+    cohesion: 6,
+    steps: 17,
+  },
+  {
+    levelName: '9 (hard)',
+    size: 7,
+    cohesion: 6,
+    steps: 20,
+  },
+  {
+    levelName: '10 (nightmare)',
+    size: 10,
+    cohesion: 7,
+    steps: 20,
+  },
+  {
+    levelName: '11 (nightmare)',
+    size: 10,
+    cohesion: 8,
+    steps: 20,
+  },
+  {
+    levelName: '12 (nightmare)',
+    size: 10,
+    cohesion: 9,
+    steps: 42,
+  },
+];
 
-gulp.task('css', () => {
-  return gulp.src('src/scss/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('styles.css'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('build'));
-});
+const indexFileTask = gulp.series(
+  createGenerateIndexTask(levels),
+  createIndexCssTask(),
+);
 
-gulp.task('generate-level', () => {
-  const { size = 7, cohesion = 6, steps = 42 } = argv;
-
-  if (!Number.isInteger(+size)
-    || (size < 2)
-    || (!Number.isInteger(+cohesion))
-    || (cohesion >= size * size)
-    || (!Number.isInteger(+steps))
-    || (steps < 0)) {
-      console.log(
-        '\n\n  Use "--size=x --cohesion=y --steps=z" arguments, where "x" is number of cells ' +
-        'on side of square field, "x" >= 2. "y" is maximum cohesion for cell and "z" is number of ' +
-        ' steps to win \n\n'
+gulp.task('build', gulp.series(
+  cleanTask,
+  ...levels.map((level) => {
+    return gulp.series(
+      createGenerateLevelTask(level),
+      createCssTask(level.levelName),
       );
-      process.exit();
-  }
-
-  const { inputs, labels, variables } = generateStringsToInject(
-    generateLevelMap(size, cohesion, steps),
-  )
-
-  const generateHtmlTask = gulp.src('src/index.html')
-    .pipe(inject.after('<!--GENERATE-INPUTS:-->', inputs))
-    .pipe(inject.after('<!--GENERATE-LABELS:-->', labels))
-    .pipe(gulp.dest('build'));
-
-  const generateLevelMapTask = gulp.src('src/scss/base/_level-map.scss')
-    .pipe(remove({ match: /[\s\S]+/ }))
-    .pipe(inject.append(variables))
-    .pipe(gulp.dest('src/scss/base/'));
-
-  return merge(
-    generateHtmlTask,
-    generateLevelMapTask
-  );
-});
-
-gulp.task('watch', function () {
-  gulp.watch('src/scss/**/*.scss', ['css']);
-});
-
-gulp.task('new', gulp.series('generate-level', 'css'));
-
-
-
+    }),
+    indexFileTask,
+));
