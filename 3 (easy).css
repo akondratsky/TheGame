@@ -102,19 +102,19 @@ input {
   do the same for all linked cell
 */
 #cb1:not(:checked) ~ .scope {
-  --from-1-to-5-inverted: 1;
+  --from-1-to-9-inverted: 1;
 }
 
 #cb1:checked ~ .scope {
-  --from-1-to-5-inverted: 0;
+  --from-1-to-9-inverted: 0;
 }
 
 #cb1:not(:checked) ~ .scope {
-  --from-1-to-2-inverted: 1;
+  --from-1-to-4-inverted: 1;
 }
 
 #cb1:checked ~ .scope {
-  --from-1-to-2-inverted: 0;
+  --from-1-to-4-inverted: 0;
 }
 
 /*
@@ -134,11 +134,11 @@ input {
   do the same for all linked cell
 */
 #cb2:not(:checked) ~ .scope {
-  --from-2-to-8-inverted: 1;
+  --from-2-to-7-inverted: 1;
 }
 
 #cb2:checked ~ .scope {
-  --from-2-to-8-inverted: 0;
+  --from-2-to-7-inverted: 0;
 }
 
 /*
@@ -166,11 +166,11 @@ input {
 }
 
 #cb3:not(:checked) ~ .scope {
-  --from-3-to-5-inverted: 1;
+  --from-3-to-4-inverted: 1;
 }
 
 #cb3:checked ~ .scope {
-  --from-3-to-5-inverted: 0;
+  --from-3-to-4-inverted: 0;
 }
 
 /*
@@ -190,19 +190,11 @@ input {
   do the same for all linked cell
 */
 #cb4:not(:checked) ~ .scope {
-  --from-4-to-9-inverted: 1;
+  --from-4-to-3-inverted: 1;
 }
 
 #cb4:checked ~ .scope {
-  --from-4-to-9-inverted: 0;
-}
-
-#cb4:not(:checked) ~ .scope {
-  --from-4-to-6-inverted: 1;
-}
-
-#cb4:checked ~ .scope {
-  --from-4-to-6-inverted: 0;
+  --from-4-to-3-inverted: 0;
 }
 
 /*
@@ -246,19 +238,11 @@ input {
   do the same for all linked cell
 */
 #cb6:not(:checked) ~ .scope {
-  --from-6-to-8-inverted: 1;
+  --from-6-to-7-inverted: 1;
 }
 
 #cb6:checked ~ .scope {
-  --from-6-to-8-inverted: 0;
-}
-
-#cb6:not(:checked) ~ .scope {
-  --from-6-to-5-inverted: 1;
-}
-
-#cb6:checked ~ .scope {
-  --from-6-to-5-inverted: 0;
+  --from-6-to-7-inverted: 0;
 }
 
 /*
@@ -278,19 +262,11 @@ input {
   do the same for all linked cell
 */
 #cb7:not(:checked) ~ .scope {
-  --from-7-to-3-inverted: 1;
+  --from-7-to-5-inverted: 1;
 }
 
 #cb7:checked ~ .scope {
-  --from-7-to-3-inverted: 0;
-}
-
-#cb7:not(:checked) ~ .scope {
-  --from-7-to-8-inverted: 1;
-}
-
-#cb7:checked ~ .scope {
-  --from-7-to-8-inverted: 0;
+  --from-7-to-5-inverted: 0;
 }
 
 /*
@@ -310,11 +286,11 @@ input {
   do the same for all linked cell
 */
 #cb8:not(:checked) ~ .scope {
-  --from-8-to-7-inverted: 1;
+  --from-8-to-6-inverted: 1;
 }
 
 #cb8:checked ~ .scope {
-  --from-8-to-7-inverted: 0;
+  --from-8-to-6-inverted: 0;
 }
 
 /*
@@ -341,87 +317,121 @@ input {
   --from-9-to-3-inverted: 0;
 }
 
-#cb9:not(:checked) ~ .scope {
-  --from-9-to-7-inverted: 1;
-}
-
-#cb9:checked ~ .scope {
-  --from-9-to-7-inverted: 0;
-}
-
 /*
   Each cell may invert other cells
 */
 .scope {
-  --1-inverted: calc(var(--from-1-to-1-inverted));
+  --inversion-1-1: var(--from-1-to-1-inverted);
+  --1-inverted: var(--inversion-1-1);
 }
 
 #s1 {
-  background-position-y: calc(var(--1-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-1-1) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --2-inverted: calc(((var(--from-2-to-2-inverted) - var(--from-1-to-2-inverted)) * (var(--from-2-to-2-inverted) - var(--from-1-to-2-inverted))));
+  --inversion-2-1: var(--from-2-to-2-inverted);
+  --2-inverted: var(--inversion-2-1);
 }
 
 #s2 {
-  background-position-y: calc(var(--2-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-2-1) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --3-inverted: calc(((((((var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted)) * (var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted))) - var(--from-7-to-3-inverted)) * (((var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted)) * (var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted))) - var(--from-7-to-3-inverted))) - var(--from-9-to-3-inverted)) * (((((var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted)) * (var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted))) - var(--from-7-to-3-inverted)) * (((var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted)) * (var(--from-3-to-3-inverted) - var(--from-5-to-3-inverted))) - var(--from-7-to-3-inverted))) - var(--from-9-to-3-inverted))));
+  --inversion-3-1: var(--from-3-to-3-inverted);
+  --inversion-3-2: calc(
+    (var(--inversion-3-1) - var(--from-4-to-3-inverted)) * (var(--inversion-3-1) - var(--from-4-to-3-inverted))
+  );
+  --inversion-3-3: calc(
+    (var(--inversion-3-2) - var(--from-5-to-3-inverted)) * (var(--inversion-3-2) - var(--from-5-to-3-inverted))
+  );
+  --inversion-3-4: calc(
+    (var(--inversion-3-3) - var(--from-9-to-3-inverted)) * (var(--inversion-3-3) - var(--from-9-to-3-inverted))
+  );
+  --3-inverted: var(--inversion-3-4);
 }
 
 #s3 {
-  background-position-y: calc(var(--3-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-3-4) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --4-inverted: calc(var(--from-4-to-4-inverted));
+  --inversion-4-1: var(--from-4-to-4-inverted);
+  --inversion-4-2: calc(
+    (var(--inversion-4-1) - var(--from-1-to-4-inverted)) * (var(--inversion-4-1) - var(--from-1-to-4-inverted))
+  );
+  --inversion-4-3: calc(
+    (var(--inversion-4-2) - var(--from-3-to-4-inverted)) * (var(--inversion-4-2) - var(--from-3-to-4-inverted))
+  );
+  --4-inverted: var(--inversion-4-3);
 }
 
 #s4 {
-  background-position-y: calc(var(--4-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-4-3) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --5-inverted: calc(((((((var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted))) - var(--from-3-to-5-inverted)) * (((var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted))) - var(--from-3-to-5-inverted))) - var(--from-6-to-5-inverted)) * (((((var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted))) - var(--from-3-to-5-inverted)) * (((var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-1-to-5-inverted))) - var(--from-3-to-5-inverted))) - var(--from-6-to-5-inverted))));
+  --inversion-5-1: var(--from-5-to-5-inverted);
+  --inversion-5-2: calc(
+    (var(--inversion-5-1) - var(--from-7-to-5-inverted)) * (var(--inversion-5-1) - var(--from-7-to-5-inverted))
+  );
+  --5-inverted: var(--inversion-5-2);
 }
 
 #s5 {
-  background-position-y: calc(var(--5-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-5-2) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --6-inverted: calc(((((var(--from-6-to-6-inverted) - var(--from-3-to-6-inverted)) * (var(--from-6-to-6-inverted) - var(--from-3-to-6-inverted))) - var(--from-4-to-6-inverted)) * (((var(--from-6-to-6-inverted) - var(--from-3-to-6-inverted)) * (var(--from-6-to-6-inverted) - var(--from-3-to-6-inverted))) - var(--from-4-to-6-inverted))));
+  --inversion-6-1: var(--from-6-to-6-inverted);
+  --inversion-6-2: calc(
+    (var(--inversion-6-1) - var(--from-3-to-6-inverted)) * (var(--inversion-6-1) - var(--from-3-to-6-inverted))
+  );
+  --inversion-6-3: calc(
+    (var(--inversion-6-2) - var(--from-8-to-6-inverted)) * (var(--inversion-6-2) - var(--from-8-to-6-inverted))
+  );
+  --6-inverted: var(--inversion-6-3);
 }
 
 #s6 {
-  background-position-y: calc(var(--6-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-6-3) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --7-inverted: calc(((((var(--from-7-to-7-inverted) - var(--from-8-to-7-inverted)) * (var(--from-7-to-7-inverted) - var(--from-8-to-7-inverted))) - var(--from-9-to-7-inverted)) * (((var(--from-7-to-7-inverted) - var(--from-8-to-7-inverted)) * (var(--from-7-to-7-inverted) - var(--from-8-to-7-inverted))) - var(--from-9-to-7-inverted))));
+  --inversion-7-1: var(--from-7-to-7-inverted);
+  --inversion-7-2: calc(
+    (var(--inversion-7-1) - var(--from-2-to-7-inverted)) * (var(--inversion-7-1) - var(--from-2-to-7-inverted))
+  );
+  --inversion-7-3: calc(
+    (var(--inversion-7-2) - var(--from-6-to-7-inverted)) * (var(--inversion-7-2) - var(--from-6-to-7-inverted))
+  );
+  --7-inverted: var(--inversion-7-3);
 }
 
 #s7 {
-  background-position-y: calc(var(--7-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-7-3) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --8-inverted: calc(((((((var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted)) * (var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted))) - var(--from-6-to-8-inverted)) * (((var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted)) * (var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted))) - var(--from-6-to-8-inverted))) - var(--from-7-to-8-inverted)) * (((((var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted)) * (var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted))) - var(--from-6-to-8-inverted)) * (((var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted)) * (var(--from-8-to-8-inverted) - var(--from-2-to-8-inverted))) - var(--from-6-to-8-inverted))) - var(--from-7-to-8-inverted))));
+  --inversion-8-1: var(--from-8-to-8-inverted);
+  --8-inverted: var(--inversion-8-1);
 }
 
 #s8 {
-  background-position-y: calc(var(--8-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-8-1) * 26.6666666667vmin * 2);
 }
 
 .scope {
-  --9-inverted: calc(((var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted)) * (var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted))));
+  --inversion-9-1: var(--from-9-to-9-inverted);
+  --inversion-9-2: calc(
+    (var(--inversion-9-1) - var(--from-1-to-9-inverted)) * (var(--inversion-9-1) - var(--from-1-to-9-inverted))
+  );
+  --9-inverted: var(--inversion-9-2);
 }
 
 #s9 {
-  background-position-y: calc(var(--9-inverted) * 26.6666666667vmin * 2);
+  background-position-y: calc(var(--inversion-9-2) * 26.6666666667vmin * 2);
 }
 
 @keyframes colorize {
@@ -470,6 +480,14 @@ input {
 }
 
 .win {
-  --win: calc((((((((((1 - var(--1-inverted))  * (1 - var(--2-inverted)))  * (1 - var(--3-inverted)))  * (1 - var(--4-inverted)))  * (1 - var(--5-inverted)))  * (1 - var(--6-inverted)))  * (1 - var(--7-inverted)))  * (1 - var(--8-inverted)))  * (1 - var(--9-inverted))));
-  opacity: var(--win);
+  --is-win-1: calc(1 - var(--1-inverted));
+  --is-win-2: calc(var(--is-win-1) * calc(1 - var(--2-inverted)));
+  --is-win-3: calc(var(--is-win-2) * calc(1 - var(--3-inverted)));
+  --is-win-4: calc(var(--is-win-3) * calc(1 - var(--4-inverted)));
+  --is-win-5: calc(var(--is-win-4) * calc(1 - var(--5-inverted)));
+  --is-win-6: calc(var(--is-win-5) * calc(1 - var(--6-inverted)));
+  --is-win-7: calc(var(--is-win-6) * calc(1 - var(--7-inverted)));
+  --is-win-8: calc(var(--is-win-7) * calc(1 - var(--8-inverted)));
+  --is-win-9: calc(var(--is-win-8) * calc(1 - var(--9-inverted)));
+  opacity: var(--is-win-9);
 }
