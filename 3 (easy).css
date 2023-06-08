@@ -84,6 +84,321 @@ input {
   background-position-x: 0;
 }
 
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb1:not(:checked) ~ .scope {
+  --from-1-to-1-inverted: 1;
+}
+
+#cb1:checked ~ .scope {
+  --from-1-to-1-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb1:not(:checked) ~ .scope {
+  --from-1-to-4-inverted: 1;
+}
+
+#cb1:checked ~ .scope {
+  --from-1-to-4-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb2:not(:checked) ~ .scope {
+  --from-2-to-2-inverted: 1;
+}
+
+#cb2:checked ~ .scope {
+  --from-2-to-2-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb2:not(:checked) ~ .scope {
+  --from-2-to-3-inverted: 1;
+}
+
+#cb2:checked ~ .scope {
+  --from-2-to-3-inverted: 0;
+}
+
+#cb2:not(:checked) ~ .scope {
+  --from-2-to-4-inverted: 1;
+}
+
+#cb2:checked ~ .scope {
+  --from-2-to-4-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb3:not(:checked) ~ .scope {
+  --from-3-to-3-inverted: 1;
+}
+
+#cb3:checked ~ .scope {
+  --from-3-to-3-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb3:not(:checked) ~ .scope {
+  --from-3-to-7-inverted: 1;
+}
+
+#cb3:checked ~ .scope {
+  --from-3-to-7-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb4:not(:checked) ~ .scope {
+  --from-4-to-4-inverted: 1;
+}
+
+#cb4:checked ~ .scope {
+  --from-4-to-4-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb4:not(:checked) ~ .scope {
+  --from-4-to-9-inverted: 1;
+}
+
+#cb4:checked ~ .scope {
+  --from-4-to-9-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb5:not(:checked) ~ .scope {
+  --from-5-to-5-inverted: 1;
+}
+
+#cb5:checked ~ .scope {
+  --from-5-to-5-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb5:not(:checked) ~ .scope {
+  --from-5-to-6-inverted: 1;
+}
+
+#cb5:checked ~ .scope {
+  --from-5-to-6-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb6:not(:checked) ~ .scope {
+  --from-6-to-6-inverted: 1;
+}
+
+#cb6:checked ~ .scope {
+  --from-6-to-6-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb6:not(:checked) ~ .scope {
+  --from-6-to-9-inverted: 1;
+}
+
+#cb6:checked ~ .scope {
+  --from-6-to-9-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb7:not(:checked) ~ .scope {
+  --from-7-to-7-inverted: 1;
+}
+
+#cb7:checked ~ .scope {
+  --from-7-to-7-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb7:not(:checked) ~ .scope {
+  --from-7-to-4-inverted: 1;
+}
+
+#cb7:checked ~ .scope {
+  --from-7-to-4-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb8:not(:checked) ~ .scope {
+  --from-8-to-8-inverted: 1;
+}
+
+#cb8:checked ~ .scope {
+  --from-8-to-8-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb8:not(:checked) ~ .scope {
+  --from-8-to-5-inverted: 1;
+}
+
+#cb8:checked ~ .scope {
+  --from-8-to-5-inverted: 0;
+}
+
+#cb8:not(:checked) ~ .scope {
+  --from-8-to-6-inverted: 1;
+}
+
+#cb8:checked ~ .scope {
+  --from-8-to-6-inverted: 0;
+}
+
+/*
+  we set same --from-CURRENT-to-CURRENT - the problem of scope!
+  to cell's label
+  and to win rule
+*/
+#cb9:not(:checked) ~ .scope {
+  --from-9-to-9-inverted: 1;
+}
+
+#cb9:checked ~ .scope {
+  --from-9-to-9-inverted: 0;
+}
+
+/*
+  do the same for all linked cell
+*/
+#cb9:not(:checked) ~ .scope {
+  --from-9-to-5-inverted: 1;
+}
+
+#cb9:checked ~ .scope {
+  --from-9-to-5-inverted: 0;
+}
+
+#cb9:not(:checked) ~ .scope {
+  --from-9-to-4-inverted: 1;
+}
+
+#cb9:checked ~ .scope {
+  --from-9-to-4-inverted: 0;
+}
+
+/*
+  Each cell may invert other cells
+*/
+.scope {
+  --1-inverted: calc(var(--from-1-to-1-inverted));
+}
+
+#s1 {
+  background-position-y: calc(var(--1-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --2-inverted: calc(var(--from-2-to-2-inverted));
+}
+
+#s2 {
+  background-position-y: calc(var(--2-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --3-inverted: calc(((var(--from-3-to-3-inverted) - var(--from-2-to-3-inverted)) * (var(--from-3-to-3-inverted) - var(--from-2-to-3-inverted))));
+}
+
+#s3 {
+  background-position-y: calc(var(--3-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --4-inverted: calc(((((((((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted)) * (((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted))) - var(--from-7-to-4-inverted)) * (((((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted)) * (((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted))) - var(--from-7-to-4-inverted))) - var(--from-9-to-4-inverted)) * (((((((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted)) * (((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted))) - var(--from-7-to-4-inverted)) * (((((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted)) * (((var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted)) * (var(--from-4-to-4-inverted) - var(--from-1-to-4-inverted))) - var(--from-2-to-4-inverted))) - var(--from-7-to-4-inverted))) - var(--from-9-to-4-inverted))));
+}
+
+#s4 {
+  background-position-y: calc(var(--4-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --5-inverted: calc(((((var(--from-5-to-5-inverted) - var(--from-8-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-8-to-5-inverted))) - var(--from-9-to-5-inverted)) * (((var(--from-5-to-5-inverted) - var(--from-8-to-5-inverted)) * (var(--from-5-to-5-inverted) - var(--from-8-to-5-inverted))) - var(--from-9-to-5-inverted))));
+}
+
+#s5 {
+  background-position-y: calc(var(--5-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --6-inverted: calc(((((var(--from-6-to-6-inverted) - var(--from-5-to-6-inverted)) * (var(--from-6-to-6-inverted) - var(--from-5-to-6-inverted))) - var(--from-8-to-6-inverted)) * (((var(--from-6-to-6-inverted) - var(--from-5-to-6-inverted)) * (var(--from-6-to-6-inverted) - var(--from-5-to-6-inverted))) - var(--from-8-to-6-inverted))));
+}
+
+#s6 {
+  background-position-y: calc(var(--6-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --7-inverted: calc(((var(--from-7-to-7-inverted) - var(--from-3-to-7-inverted)) * (var(--from-7-to-7-inverted) - var(--from-3-to-7-inverted))));
+}
+
+#s7 {
+  background-position-y: calc(var(--7-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --8-inverted: calc(var(--from-8-to-8-inverted));
+}
+
+#s8 {
+  background-position-y: calc(var(--8-inverted) * 26.6666666667vmin * 2);
+}
+
+.scope {
+  --9-inverted: calc(((((var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted)) * (var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted))) - var(--from-6-to-9-inverted)) * (((var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted)) * (var(--from-9-to-9-inverted) - var(--from-4-to-9-inverted))) - var(--from-6-to-9-inverted))));
+}
+
+#s9 {
+  background-position-y: calc(var(--9-inverted) * 26.6666666667vmin * 2);
+}
+
 @keyframes colorize {
   to {
     background-position: 200% center;
@@ -107,7 +422,7 @@ input {
   }
 }
 .win {
-  display: none;
+  display: inline-block;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -116,6 +431,7 @@ input {
   text-transform: uppercase;
   font-weight: 900;
   user-select: none;
+  pointer-events: none;
   background-image: linear-gradient(-90deg, #FF0018 0%, #FFA52C 20%, #FFFF41 40%, #008018 60%, #0000F9 80%, #86007D 100%);
   background-size: auto auto;
   background-clip: border-box;
@@ -127,222 +443,7 @@ input {
   animation: colorize 2s linear infinite, move 2s linear infinite;
 }
 
-#cb1:checked ~ #cb2:checked ~ #cb3:checked ~ #cb4:checked ~ #cb5:checked ~ #cb6:checked ~ #cb7:checked ~ #cb8:checked ~ #cb9:checked ~ .win {
-  display: inline-block;
-}
-
-#cb1:checked ~ #cb2:checked ~ #cb3:checked ~ #cb4:checked ~ #cb5:checked ~ #cb6:checked ~ #cb7:checked ~ #cb8:checked ~ #cb9:checked ~ .game-field {
-  pointer-events: none;
-}
-
-#cb1:not(:checked) ~ .game-field #s1 {
-  --from-1-to-1: 26.6666666667vmin;
-}
-
-#cb1:checked ~ .game-field #s1 {
-  --from-1-to-1: 0%;
-}
-
-#cb1:not(:checked) ~ .game-field #s9 {
-  --from-1-to-9: 26.6666666667vmin;
-}
-
-#cb1:checked ~ .game-field #s9 {
-  --from-1-to-9: 0%;
-}
-
-#cb1:not(:checked) ~ .game-field #s8 {
-  --from-1-to-8: 26.6666666667vmin;
-}
-
-#cb1:checked ~ .game-field #s8 {
-  --from-1-to-8: 0%;
-}
-
-#cb2:not(:checked) ~ .game-field #s2 {
-  --from-2-to-2: 26.6666666667vmin;
-}
-
-#cb2:checked ~ .game-field #s2 {
-  --from-2-to-2: 0%;
-}
-
-#cb2:not(:checked) ~ .game-field #s9 {
-  --from-2-to-9: 26.6666666667vmin;
-}
-
-#cb2:checked ~ .game-field #s9 {
-  --from-2-to-9: 0%;
-}
-
-#cb3:not(:checked) ~ .game-field #s3 {
-  --from-3-to-3: 26.6666666667vmin;
-}
-
-#cb3:checked ~ .game-field #s3 {
-  --from-3-to-3: 0%;
-}
-
-#cb3:not(:checked) ~ .game-field #s5 {
-  --from-3-to-5: 26.6666666667vmin;
-}
-
-#cb3:checked ~ .game-field #s5 {
-  --from-3-to-5: 0%;
-}
-
-#cb4:not(:checked) ~ .game-field #s4 {
-  --from-4-to-4: 26.6666666667vmin;
-}
-
-#cb4:checked ~ .game-field #s4 {
-  --from-4-to-4: 0%;
-}
-
-#cb4:not(:checked) ~ .game-field #s8 {
-  --from-4-to-8: 26.6666666667vmin;
-}
-
-#cb4:checked ~ .game-field #s8 {
-  --from-4-to-8: 0%;
-}
-
-#cb4:not(:checked) ~ .game-field #s2 {
-  --from-4-to-2: 26.6666666667vmin;
-}
-
-#cb4:checked ~ .game-field #s2 {
-  --from-4-to-2: 0%;
-}
-
-#cb5:not(:checked) ~ .game-field #s5 {
-  --from-5-to-5: 26.6666666667vmin;
-}
-
-#cb5:checked ~ .game-field #s5 {
-  --from-5-to-5: 0%;
-}
-
-#cb5:not(:checked) ~ .game-field #s8 {
-  --from-5-to-8: 26.6666666667vmin;
-}
-
-#cb5:checked ~ .game-field #s8 {
-  --from-5-to-8: 0%;
-}
-
-#cb6:not(:checked) ~ .game-field #s6 {
-  --from-6-to-6: 26.6666666667vmin;
-}
-
-#cb6:checked ~ .game-field #s6 {
-  --from-6-to-6: 0%;
-}
-
-#cb6:not(:checked) ~ .game-field #s4 {
-  --from-6-to-4: 26.6666666667vmin;
-}
-
-#cb6:checked ~ .game-field #s4 {
-  --from-6-to-4: 0%;
-}
-
-#cb6:not(:checked) ~ .game-field #s7 {
-  --from-6-to-7: 26.6666666667vmin;
-}
-
-#cb6:checked ~ .game-field #s7 {
-  --from-6-to-7: 0%;
-}
-
-#cb7:not(:checked) ~ .game-field #s7 {
-  --from-7-to-7: 26.6666666667vmin;
-}
-
-#cb7:checked ~ .game-field #s7 {
-  --from-7-to-7: 0%;
-}
-
-#cb7:not(:checked) ~ .game-field #s6 {
-  --from-7-to-6: 26.6666666667vmin;
-}
-
-#cb7:checked ~ .game-field #s6 {
-  --from-7-to-6: 0%;
-}
-
-#cb8:not(:checked) ~ .game-field #s8 {
-  --from-8-to-8: 26.6666666667vmin;
-}
-
-#cb8:checked ~ .game-field #s8 {
-  --from-8-to-8: 0%;
-}
-
-#cb8:not(:checked) ~ .game-field #s4 {
-  --from-8-to-4: 26.6666666667vmin;
-}
-
-#cb8:checked ~ .game-field #s4 {
-  --from-8-to-4: 0%;
-}
-
-#cb9:not(:checked) ~ .game-field #s9 {
-  --from-9-to-9: 26.6666666667vmin;
-}
-
-#cb9:checked ~ .game-field #s9 {
-  --from-9-to-9: 0%;
-}
-
-#cb9:not(:checked) ~ .game-field #s7 {
-  --from-9-to-7: 26.6666666667vmin;
-}
-
-#cb9:checked ~ .game-field #s7 {
-  --from-9-to-7: 0%;
-}
-
-#cb9:not(:checked) ~ .game-field #s8 {
-  --from-9-to-8: 26.6666666667vmin;
-}
-
-#cb9:checked ~ .game-field #s8 {
-  --from-9-to-8: 0%;
-}
-
-#s1 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-1-to-1) );
-}
-
-#s2 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-2-to-2) + var(--from-4-to-2) );
-}
-
-#s3 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-3-to-3) );
-}
-
-#s4 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-4-to-4) + var(--from-6-to-4) + var(--from-8-to-4) );
-}
-
-#s5 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-5-to-5) + var(--from-3-to-5) );
-}
-
-#s6 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-6-to-6) + var(--from-7-to-6) );
-}
-
-#s7 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-7-to-7) + var(--from-6-to-7) + var(--from-9-to-7) );
-}
-
-#s8 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-8-to-8) + var(--from-1-to-8) + var(--from-4-to-8) + var(--from-5-to-8) + var(--from-9-to-8) );
-}
-
-#s9 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-9-to-9) + var(--from-1-to-9) + var(--from-2-to-9) );
+.win {
+  --win: calc((((((((((1 - var(--1-inverted))  * (1 - var(--2-inverted)))  * (1 - var(--3-inverted)))  * (1 - var(--4-inverted)))  * (1 - var(--5-inverted)))  * (1 - var(--6-inverted)))  * (1 - var(--7-inverted)))  * (1 - var(--8-inverted)))  * (1 - var(--9-inverted))));
+  opacity: var(--win);
 }
