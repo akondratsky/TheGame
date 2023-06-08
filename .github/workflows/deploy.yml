@@ -2,7 +2,7 @@ name: deployment
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 run-name: deployment
 
