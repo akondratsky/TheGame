@@ -33,23 +33,25 @@
   Each cell may invert other cells
 */
 @for $cell-number from 1 through $number-of-cells {
-  // is it inverted itself?
-  $inverted: #{ "var(--from-" + $cell-number + "-to-" + $cell-number + "-inverted)"};
-
-  @for $cn from 1 through $number-of-cells {
-    @if contains(nth($cells-links, $cn), $cell-number) {
-      $currentInverted: #{ "var(--from-" + $cn + "-to-" + $cell-number + "-inverted)"};
-      $inverted: #{ xorVars($inverted, $currentInverted) };
-    }
-  }
+  $index: 1;
   
-  $var: #{ "--" + $cell-number + "-inverted" };
-
   .scope {
-    #{ $var }: calc(#{ $inverted });
+    // is cell inverted by itself?
+    --inversion-#{$cell-number}-#{$index}: var(--from-#{$cell-number}-to-#{$cell-number}-inverted);
+
+    @for $cn from 1 through $number-of-cells {
+      @if contains(nth($cells-links, $cn), $cell-number) {
+        $index: $index + 1;
+        --inversion-#{$cell-number}-#{$index}: calc(
+          #{ xorVars(var(--inversion-#{$cell-number}-#{$index - 1}), var(--from-#{$cn}-to-#{$cell-number}-inverted)) }
+        );
+      }
+    }
+
+    --#{$cell-number}-inverted: var(--inversion-#{$cell-number}-#{$index});
   }
 
   #s#{$cell-number} {
-    background-position-y: #{ "calc(var(" + $var + ") * " + $cell-width + " * 2)" };
+    background-position-y: calc(var(--inversion-#{$cell-number}-#{$index}) * #{$cell-width} * 2);
   }
 }

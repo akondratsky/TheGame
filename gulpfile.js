@@ -65,22 +65,10 @@ const levels = [
     steps: 20,
   },
   {
-    levelName: '10 (nightmare)',
-    size: 10,
-    cohesion: 7,
-    steps: 20,
-  },
-  {
-    levelName: '11 (nightmare)',
-    size: 10,
-    cohesion: 8,
-    steps: 20,
-  },
-  {
-    levelName: '12 (nightmare)',
-    size: 10,
-    cohesion: 9,
-    steps: 42,
+    levelName: '10 (calc overload - level does not work)',
+    size: 8,
+    cohesion: 3,
+    steps: 1,
   },
 ];
 

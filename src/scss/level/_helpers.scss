@@ -11,14 +11,14 @@
 @function xorVars($k, $i) {
   //  ( var(--k) - var(--i)) * (var(--k) - var(--i))
   $diff: #{ "(" + $k + " - " + $i + ")"};
-  @return #{ "(" + $diff + " * " + $diff + ")"};
+  @return #{ $diff + " * " + $diff};
 }
 
 @function notVar($k) {
-  @return #{ "(1 - " + $k + ")" };
+  @return #{ "1 - " + $k + "" };
 }
 
 @function andVars($k, $i) {
   // var(--k)*var(--i)
-  @return #{ "(" + $k " * " + $i + ")"};
+  @return #{ $k + " * " + $i};
 }

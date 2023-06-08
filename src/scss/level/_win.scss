@@ -61,14 +61,13 @@
 }
 
 .win {
-  $isWin: notVar("var(--1-inverted)");
+  --is-win-1: calc(1 - var(--1-inverted)); // NOT --1-inverted
+
   @for $cn from 2 through $number-of-cells {
-    $isCurrentInverted: var( #{"--"+$cn+"-inverted"} );
-    $isWin: #{ andVars($isWin, notVar($isCurrentInverted) )};
+    $isPrevWin: var(--is-win-#{$cn - 1});
+    $isCurrentWin: calc(1 - var(--#{$cn}-inverted));  // current cell is NOT inverted
+    --is-win-#{$cn}: calc(#{ andVars($isPrevWin, $isCurrentWin) });
   }
-  $isWin: #{"calc(" + $isWin + ")"};
 
-  --win: #{ $isWin };
-
-  opacity: var(--win);
+  opacity: var(--is-win-#{$number-of-cells});
 }
