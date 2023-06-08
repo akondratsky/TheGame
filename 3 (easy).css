@@ -77,20 +77,12 @@ input {
   --from-1-to-1: 0%;
 }
 
-#cb1:not(:checked) ~ .game-field #s3 {
-  --from-1-to-3: 26.6666666667vmin;
+#cb1:not(:checked) ~ .game-field #s7 {
+  --from-1-to-7: 26.6666666667vmin;
 }
 
-#cb1:checked ~ .game-field #s3 {
-  --from-1-to-3: 0%;
-}
-
-#cb1:not(:checked) ~ .game-field #s8 {
-  --from-1-to-8: 26.6666666667vmin;
-}
-
-#cb1:checked ~ .game-field #s8 {
-  --from-1-to-8: 0%;
+#cb1:checked ~ .game-field #s7 {
+  --from-1-to-7: 0%;
 }
 
 #cb2:not(:checked) ~ .game-field #s2 {
@@ -101,12 +93,12 @@ input {
   --from-2-to-2: 0%;
 }
 
-#cb2:not(:checked) ~ .game-field #s5 {
-  --from-2-to-5: 26.6666666667vmin;
+#cb2:not(:checked) ~ .game-field #s3 {
+  --from-2-to-3: 26.6666666667vmin;
 }
 
-#cb2:checked ~ .game-field #s5 {
-  --from-2-to-5: 0%;
+#cb2:checked ~ .game-field #s3 {
+  --from-2-to-3: 0%;
 }
 
 #cb3:not(:checked) ~ .game-field #s3 {
@@ -115,6 +107,14 @@ input {
 
 #cb3:checked ~ .game-field #s3 {
   --from-3-to-3: 0%;
+}
+
+#cb3:not(:checked) ~ .game-field #s5 {
+  --from-3-to-5: 26.6666666667vmin;
+}
+
+#cb3:checked ~ .game-field #s5 {
+  --from-3-to-5: 0%;
 }
 
 #cb3:not(:checked) ~ .game-field #s6 {
@@ -133,6 +133,14 @@ input {
   --from-4-to-4: 0%;
 }
 
+#cb4:not(:checked) ~ .game-field #s3 {
+  --from-4-to-3: 26.6666666667vmin;
+}
+
+#cb4:checked ~ .game-field #s3 {
+  --from-4-to-3: 0%;
+}
+
 #cb4:not(:checked) ~ .game-field #s6 {
   --from-4-to-6: 26.6666666667vmin;
 }
@@ -147,14 +155,6 @@ input {
 
 #cb5:checked ~ .game-field #s5 {
   --from-5-to-5: 0%;
-}
-
-#cb5:not(:checked) ~ .game-field #s3 {
-  --from-5-to-3: 26.6666666667vmin;
-}
-
-#cb5:checked ~ .game-field #s3 {
-  --from-5-to-3: 0%;
 }
 
 #cb5:not(:checked) ~ .game-field #s7 {
@@ -173,12 +173,20 @@ input {
   --from-6-to-6: 0%;
 }
 
-#cb6:not(:checked) ~ .game-field #s2 {
-  --from-6-to-2: 26.6666666667vmin;
+#cb6:not(:checked) ~ .game-field #s4 {
+  --from-6-to-4: 26.6666666667vmin;
 }
 
-#cb6:checked ~ .game-field #s2 {
-  --from-6-to-2: 0%;
+#cb6:checked ~ .game-field #s4 {
+  --from-6-to-4: 0%;
+}
+
+#cb6:not(:checked) ~ .game-field #s8 {
+  --from-6-to-8: 26.6666666667vmin;
+}
+
+#cb6:checked ~ .game-field #s8 {
+  --from-6-to-8: 0%;
 }
 
 #cb7:not(:checked) ~ .game-field #s7 {
@@ -189,12 +197,20 @@ input {
   --from-7-to-7: 0%;
 }
 
-#cb7:not(:checked) ~ .game-field #s4 {
-  --from-7-to-4: 26.6666666667vmin;
+#cb7:not(:checked) ~ .game-field #s3 {
+  --from-7-to-3: 26.6666666667vmin;
 }
 
-#cb7:checked ~ .game-field #s4 {
-  --from-7-to-4: 0%;
+#cb7:checked ~ .game-field #s3 {
+  --from-7-to-3: 0%;
+}
+
+#cb7:not(:checked) ~ .game-field #s2 {
+  --from-7-to-2: 26.6666666667vmin;
+}
+
+#cb7:checked ~ .game-field #s2 {
+  --from-7-to-2: 0%;
 }
 
 #cb8:not(:checked) ~ .game-field #s8 {
@@ -205,20 +221,12 @@ input {
   --from-8-to-8: 0%;
 }
 
-#cb8:not(:checked) ~ .game-field #s9 {
-  --from-8-to-9: 26.6666666667vmin;
+#cb8:not(:checked) ~ .game-field #s7 {
+  --from-8-to-7: 26.6666666667vmin;
 }
 
-#cb8:checked ~ .game-field #s9 {
-  --from-8-to-9: 0%;
-}
-
-#cb8:not(:checked) ~ .game-field #s3 {
-  --from-8-to-3: 26.6666666667vmin;
-}
-
-#cb8:checked ~ .game-field #s3 {
-  --from-8-to-3: 0%;
+#cb8:checked ~ .game-field #s7 {
+  --from-8-to-7: 0%;
 }
 
 #cb9:not(:checked) ~ .game-field #s9 {
@@ -227,14 +235,6 @@ input {
 
 #cb9:checked ~ .game-field #s9 {
   --from-9-to-9: 0%;
-}
-
-#cb9:not(:checked) ~ .game-field #s7 {
-  --from-9-to-7: 26.6666666667vmin;
-}
-
-#cb9:checked ~ .game-field #s7 {
-  --from-9-to-7: 0%;
 }
 
 #cb9:not(:checked) ~ .game-field #s5 {
@@ -250,19 +250,19 @@ input {
 }
 
 #s2 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-2-to-2) + var(--from-6-to-2) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-2-to-2) + var(--from-7-to-2) );
 }
 
 #s3 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-3-to-3) + var(--from-1-to-3) + var(--from-5-to-3) + var(--from-8-to-3) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-3-to-3) + var(--from-2-to-3) + var(--from-4-to-3) + var(--from-7-to-3) );
 }
 
 #s4 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-4-to-4) + var(--from-7-to-4) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-4-to-4) + var(--from-6-to-4) );
 }
 
 #s5 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-5-to-5) + var(--from-2-to-5) + var(--from-9-to-5) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-5-to-5) + var(--from-3-to-5) + var(--from-9-to-5) );
 }
 
 #s6 {
@@ -270,15 +270,15 @@ input {
 }
 
 #s7 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-7-to-7) + var(--from-5-to-7) + var(--from-9-to-7) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-7-to-7) + var(--from-1-to-7) + var(--from-5-to-7) + var(--from-8-to-7) );
 }
 
 #s8 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-8-to-8) + var(--from-1-to-8) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-8-to-8) + var(--from-6-to-8) );
 }
 
 #s9 {
-  background-position-y: calc( 26.6666666667vmin + var(--from-9-to-9) + var(--from-8-to-9) );
+  background-position-y: calc( 26.6666666667vmin + var(--from-9-to-9) );
 }
 
 .cell {
