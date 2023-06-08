@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const gulpCopy = require('gulp-copy');
 const { createGenerateLevelTask } = require('./utils/createGenerateLevelTask');
 const { createCssTask } = require('./utils/createCssTask');
 const { createGenerateIndexTask } = require('./utils/createGenerateIndexTask');
@@ -91,7 +90,6 @@ const indexFileTask = gulp.series(
 );
 
 const copyStaticTask = () => gulp.src(['favicon.png', 'img.png'])
-  .pipe(gulpCopy('.'))
   .pipe(gulp.dest('dist'));
 
 gulp.task('build', gulp.series(
